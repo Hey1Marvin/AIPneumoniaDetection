@@ -1,0 +1,2507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>Neural.Network API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>Neural.Network</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"> ########### used Modules ############
+
+# numpy for linear algebra
+import numpy as np
+
+# matplotlib for plotting the loss functions and/or accuracy
+import matplotlib.pyplot as plt
+
+# confusion matrix
+from sklearn.metrics import confusion_matrix
+
+# accuracy score
+from sklearn.metrics import accuracy_score
+
+# show progress bar
+from tqdm import tqdm
+from alive_progress import alive_bar
+
+# Modules for Layer and Utility functions
+from .Rectifier import *
+from .Layer import *
+
+#zum Abspeichern der Parameter
+import pickle
+
+
+##### Classes ######
+
+
+# #### [Batch Normalization class]
+
+class BatchNorm:
+    
+    def __init__(self, beta=0.9, eta=1e-6):
+        &#39;&#39;&#39;
+        Der Initialisierer der BatchReg-Klasse. Setzt das Beta und Eta.
+        
+        Parameter:
+        beta: Beta für den moving average
+        eta: 𝜂, Kleiner Float, der zur Varianz addiert wird, um Nullteiler zu vermeiden
+        &#39;&#39;&#39;
+        self.eta = eta
+        self.beta = beta
+
+    def init_params(self, m):
+        &#39;&#39;&#39;
+        Diese Funktion legt die Parameter der Batch-Normalisierungs-Schicht fest.
+        
+        Parameter:
+        m: Shape des Inputs zur BN-Schicht
+        &#39;&#39;&#39;
+        self.gamma = np.ones((m))
+        self.alpha, self.avg, self.std  = np.zeros((m)), np.zeros((m)), np.zeros((m))
+
+    def forward(self, x, mode=&#39;train&#39;):
+        &#39;&#39;&#39;
+        Diese Funktion macht die Forward-Propagation. Sie rechnet den Mittelwert und die Varianz des Inputs aus, 
+        normalisiert den Input und skaliert und verschiebt ihn dann.
+        
+        Parameter:
+        x: Input zur BN-Schicht
+        mode: Forward-Pass, der für das Training oder den Test benutzt wird
+        
+        Output:
+        y: Die normalisierten, skalierten und verschobenen Input-Daten. Dieser Output wird zur nächsten Schicht im Netzwerk weitergegeben.
+        &#39;&#39;&#39;
+        if mode==&#39;train&#39;:
+            self.s, self.m = x.shape
+            self.mu = np.mean(x, axis = 0) # 𝜇
+            self.var = np.var(x, axis=0) # 𝜎^2
+            self.xmu = x - self.mu # x - 𝜇
+            self.ivar = 1 / np.sqrt(self.var + self.eta) # 𝜎𝑖𝑛𝑣
+            self.xhat = self.xmu * self.ivar
+            y = self.gamma*self.xhat + self.alpha # yl
+            self.avg = self.beta * self.avg + (1 - self.beta) * self.mu
+            self.std = self.beta * self.std + (1 - self.beta) * self.var
+        elif mode==&#39;test&#39;:
+            y = self.gamma * ((x - self.avg) / np.sqrt(self.std + self.eta)) + self.alpha
+        else:
+            raise ValueError(&#39;Ungültiger Forward-Batchnorm-Modus &#34;%s&#34;&#39; % mode)
+        return y
+
+    def backpropagation(self, dy):
+        &#39;&#39;&#39;
+        Diese Funktion macht die Backward-Propagation. Sie rechnet die Gradienten der Skalierungs- und Verschiebungsparameter 
+        und den Gradienten des Inputs aus.
+        
+        Parameter:
+        dy: Gradient des Outputs
+        
+        Output:
+        dx: Der Gradient des Inputs zur BN-Schicht. Dieser Gradient wird zur vorherigen Schicht im Netzwerk zurückgegeben und zum Updaten der Gewichte und des Bias in dieser Schicht benutzt.
+        &#39;&#39;&#39;
+        self.dgamma = np.sum(dy * self.xhat, axis=0)
+        self.dalpha = np.sum(dy, axis=0)
+        dxhat = dy * self.gamma
+        dvar = np.sum(dxhat * self.xmu * (-.5) * (self.ivar**3), axis=0)
+        dmu = np.sum(dxhat * (-self.ivar), axis=0)
+        dx = dxhat * self.ivar + dvar * (2/self.s) * self.xmu + (1/self.s)*dmu
+        return dx
+
+    def update(self, learnrate, size, k):
+        &#39;&#39;&#39;
+        Diese Funktion updatet die Skalierungs- und Verschiebungsparameter basierend auf den während der Backward-Propagation 
+        ausgerechneten Gradienten.
+        
+        Parameter:
+        learnrate: Lernrate
+        size: Batch-Size (Anzahl der Samples im Batch)
+        k: Iterationsnummer
+        &#39;&#39;&#39;
+        self.gamma -= self.dgamma*(learnrate/size)
+        self.alpha -= self.dalpha*(learnrate/size)
+        
+        
+
+
+# #### Network
+#Build an Neural Network    
+    
+class Network:
+    
+    def __init__(self, layers=None):
+        &#39;&#39;&#39;
+        Erzeugt ein sequentielles CNN-Modell.
+
+        Parameters
+        ----------
+        layers : list, optional
+            Eine Liste von Schichten, die dem Modell hinzugefügt werden sollen.
+            Wenn None, wird eine leere Liste erstellt. Der Standardwert ist None.
+        &#39;&#39;&#39;
+        if layers is None:
+            self.network_structure = []
+        else:
+            self.network_structure = layers
+        self.architecture_called = False # Ein Attribut, das angibt, ob die Architektur des Modells berechnet wurde
+
+    def add(self, schicht):
+        &#39;&#39;&#39;
+        Fügt eine Schicht zum Modell hinzu.
+
+        Parameters
+        ----------
+        schicht : object
+            Ein Objekt, das eine Schicht repräsentiert, z.B. Conv2D, Dense, etc.
+        &#39;&#39;&#39;
+        # Fügt die Schicht zur Liste der Schichten hinzu
+        self.network_structure.append(schicht)
+
+    def Input(self, input_shape):
+        &#39;&#39;&#39;
+        Definiert die Eingabeform des Modells.
+
+        Parameters
+        ----------
+        input_shape : tuple
+            Ein Tupel, das die Form der Eingabedaten angibt, z.B. (3, 32, 32) für RGB-Bilder mit 32x32 Pixeln.
+        &#39;&#39;&#39;
+        self.input_shape = input_shape # Die Dimension der Eingabe
+        self.layer_out_shape = [self.input_shape] # Eine Liste, die die Ausgabeform jeder Schicht speichert
+        self.schicht_name = [&#34;Input&#34;] # Eine Liste, die die Namen jeder Schicht speichert
+
+    def network_architecture(self):
+        &#39;&#39;&#39;
+        Berechnet die Architektur des Modells basierend auf den hinzugefügten Schichten.
+        &#39;&#39;&#39;
+        for schicht in self.network_structure: # Iteriert über jede Schicht in der Liste
+            if isinstance(schicht, Conv2D): # Wenn die Schicht eine Conv2D-Schicht ist
+                if schicht.input_shape_x is not None: # Wenn die Schicht eine Eingabeform definiert hat
+                    self.Input(schicht.input_shape_x) # Ruft die Input-Methode mit dieser Form auf
+                schicht.get_dimensions(self.layer_out_shape[-1]) # Berechnet die Ausgabeform der Schicht basierend auf der vorherigen Schicht
+                self.layer_out_shape.append(schicht.output_shape) # Fügt die Ausgabeform zur Architekturliste hinzu
+                self.schicht_name.append(schicht.__class__.__name__) # Fügt den Namen der Schicht zur Namensliste hinzu
+            elif isinstance(schicht, (Flatten, Pooling2D)): # Wenn die Schicht eine Flatten- oder Pooling2D-Schicht ist
+                schicht.get_dimensions(self.layer_out_shape[-1]) # Berechnet die Ausgabeform der Schicht basierend auf der vorherigen Schicht
+                self.layer_out_shape.append(schicht.output_shape) # Fügt die Ausgabeform zur Architekturliste hinzu
+                self.schicht_name.append(schicht.__class__.__name__) # Fügt den Namen der Schicht zur Namensliste hinzu
+            elif isinstance(schicht, Dense): # Wenn die Schicht eine Dense-Schicht ist
+                self.layer_out_shape.append(schicht.neurons) # Fügt die Anzahl der Neuronen zur Architekturliste hinzu
+                self.schicht_name.append(schicht.__class__.__name__) # Fügt den Namen der Schicht zur Namensliste hinzu
+            else: # Wenn die Schicht eine andere Art von Schicht ist
+                self.layer_out_shape.append(self.layer_out_shape[-1]) # Fügt die gleiche Ausgabeform wie die vorherige Schicht zur Architekturliste hinzu
+                self.schicht_name.append(schicht.__class__.__name__) # Fügt den Namen der Schicht zur Namensliste hinzu
+
+        self.network_structure = list(filter(None, self.network_structure)) # Entfernt alle None-Elemente aus der Schichtenliste
+        try:
+            idx = self.schicht_name.index(&#34;NoneType&#34;) # Sucht nach dem Index eines NoneType-Elements in der Namensliste
+            del self.schicht_name[idx] # Löscht das Element an diesem Index aus der Namensliste
+            del self.layer_out_shape[idx] # Löscht das Element an diesem Index aus der Architekturliste
+        except:
+            pass
+        
+    def summary(self, name = &#34;Network&#34;):
+           
+        if self.architecture_called==False: # Wenn die Architektur des Modells noch nicht berechnet wurde
+            self.network_architecture() # Ruft die Methode network_architecture auf, um die Architektur zu berechnen
+            self.architecture_called = True # Setzt das Attribut architecture_called auf True
+        len_zugewiesen = [45, 26, 15] # Eine Liste von Längen, die für die Spalten der Zusammenfassung zugewiesen werden
+        anzahl = {&#39;Dense&#39;: 1, &#39;Activation&#39;: 1, &#39;Input&#39;: 1,
+                &#39;BatchNorm&#39;: 1, &#39;Dropout&#39;: 1, &#39;Conv2D&#39;: 1,
+                &#39;Pooling2D&#39;: 1, &#39;Flatten&#39;: 1} # Ein Wörterbuch, das die Anzahl jeder Schichtart speichert
+
+        column = [&#39;Layer (type)&#39;, &#39;Output Shape&#39;, &#39;# of Parameters&#39;] # Eine Liste von Spaltennamen für die Zusammenfassung
+
+        print(&#34;Model: &#34;, name) # Druckt den Namen des Modells
+        print(&#39;-&#39;*sum(len_zugewiesen)) # Druckt eine Trennlinie
+        
+        text = &#39;&#39; # Initialisiert einen leeren Text
+        for i in range(3): # Iteriert über die drei Spalten
+            text += column[i] + &#39; &#39;*(len_zugewiesen[i]-len(column[i])) # Fügt den Spaltennamen und die erforderlichen Leerzeichen zum Text hinzu
+        print(text) # Druckt den Text
+
+        print(&#39;#&#39;*sum(len_zugewiesen)) # Druckt eine Trennlinie
+
+        gesamt_params = 0 # Initialisiert die Gesamtzahl der Parameter auf 0
+        trainierbar_params = 0 # Initialisiert die Anzahl der trainierbaren Parameter auf 0
+        nicht_trainierbar_params = 0 # Initialisiert die Anzahl der nicht trainierbaren Parameter auf 0
+
+        for i in range(len(self.schicht_name)): # Iteriert über jede Schicht in der Namensliste
+            # layer name
+            schicht_name = self.schicht_name[i] # Speichert den Namen der Schicht
+            name = schicht_name.lower() + &#39;_&#39; + str(anzahl[schicht_name]) + &#39; &#39; + &#39;(&#39; + schicht_name + &#39;)&#39; # Erstellt einen eindeutigen Namen für die Schicht mit ihrer Nummer und ihrem Typ
+            anzahl[schicht_name] += 1 # Erhöht die Anzahl dieser Schichtart um 1
+
+            # output shape
+            try: # Versucht, die Ausgabeform der Schicht als Tupel zu erstellen
+                out = &#39;(None, &#39; # Beginnt das Tupel mit None für die Batch-Dimension
+                for n in range(len(self.layer_out_shape[i])-1): # Iteriert über die restlichen Dimensionen außer der letzten
+                    out += str(self.layer_out_shape[i][n]) + &#39;, &#39; # Fügt die Dimension und ein Komma zum Tupel hinzu
+                out += str(self.layer_out_shape[i][-1]) + &#39;)&#39;
+            except: # Wenn die Ausgabeform keine Tupel ist
+                out = &#39;(None, &#39; + str(self.layer_out_shape[i]) + &#39;)&#39; 
+
+            # number of params
+            if schicht_name==&#39;Dense&#39;: 
+                h0 = self.layer_out_shape[i-1] 
+                h1 = self.layer_out_shape[i]
+                if self.network_structure[i-1].use_bias: 
+                    params = h0*h1 + h1 
+                else: 
+                    params = h0*h1 
+                gesamt_params += params 
+                trainierbar_params += params
+            elif schicht_name==&#39;BatchNorm&#39;: # Wenn die Schicht eine BatchNormalization-Schicht ist
+                h = self.layer_out_shape[i] # Speichert die Anzahl der Merkmale
+                params = 4*h # Berechnet die Anzahl der Parameter als das Vierfache der Merkmale
+                trainierbar_params += 2*h # Addiert die Hälfte der Parameter zur Anzahl der trainierbaren Parameter hinzu
+                nicht_trainierbar_params += 2*h # Addiert die Hälfte der Parameter zur Anzahl der nicht trainierbaren Parameter hinzu
+                gesamt_params += params # Addiert die Anzahl der Parameter zur Gesamtzahl hinzu
+            elif schicht_name==&#39;Conv2D&#39;: # Wenn die Schicht eine Conv2D-Schicht ist
+                layer = self.network_structure[i-1] # Speichert die Schicht als ein Objekt
+                if layer.use_bias: # Wenn die Schicht einen Bias-Vektor verwendet
+                    add_b = 1 # Speichert eine zusätzliche Einheit für den Bias
+                else: # Wenn die Schicht keinen Bias-Vektor verwendet
+                    add_b = 0 # Speichert keine zusätzliche Einheit für den Bias
+                params = ((layer.inputC * layer.kernelH * layer.kernelW) + add_b) * layer.F # Berechnet die Anzahl der Parameter als das Produkt der Eingangskanäle, der Kernelhöhe, der Kernelbreite und der Anzahl der Filter plus die zusätzliche Einheit für den Bias
+                trainierbar_params += params # Addiert die Anzahl der Parameter zur Anzahl der trainierbaren Parameter hinzu
+                gesamt_params += params # Addiert die Anzahl der Parameter zur Gesamtzahl hinzu
+            else: 
+                
+                params = 0 
+            namen = [name, out, str(params)] 
+            # print this row
+            text = &#39;&#39; # Initialisiert einen leeren Text
+            for j in range(3): # Iteriert über die drei Spalten
+                text += namen[j] + &#39; &#39;*(len_zugewiesen[j]-len(namen[j])) 
+            print(text) # Druckt den Text
+            if i!=(len(self.schicht_name)-1):
+                print(&#39;.&#39;*sum(len_zugewiesen))
+            else:
+                print(&#39;#&#39;*sum(len_zugewiesen))
+        
+        print(&#34;Trainable params:&#34;, trainierbar_params) 
+        print(&#34;Non-trainable params:&#34;, nicht_trainierbar_params) # Druckt die Anzahl der nicht trainierbaren Parameter
+        print(&#34;Total params:&#34;, gesamt_params)
+        print(&#39;-&#39;*sum(len_zugewiesen)) # Druckt eine Trennlinie
+    
+    def compile(self, kosten_typ, optimierer_typ):
+        &#39;&#39;&#39;
+        Fertigt das Modell mit einer Kostenfunktion und einem Optimierer an.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+        kosten_typ : str
+            Der Name der Kostenfunktion, die für das Modell verwendet werden soll, z.B. &#34;cross-entropy&#34; oder &#34;mse&#34;.
+        optimierer_typ : str
+            Der Name des Optimierers, der für das Modell verwendet werden soll, z.B. &#34;sgd&#34; oder &#34;adam&#34;.
+
+        Returns
+        -------
+        None
+            Die Methode gibt nichts zurück, sondern setzt die Attribute kosten, kosten_typ und optimierer_typ der Instanz.
+        &#39;&#39;&#39;
+        self.kosten = Cost(kosten_typ) # Erstellt ein Objekt der Klasse Cost mit der angegebenen Kostenfunktion
+        self.kosten_typ = kosten_typ # Speichert den Namen der Kostenfunktion als Attribut
+        self.optimierer_typ = optimierer_typ # Speichert den Namen des Optimierers als Attribut
+
+    def init_params(self):
+        &#39;&#39;&#39;
+        Initiiert die Parameter des Modells basierend auf den hinzugefügten Schichten.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+
+        Returns
+        -------
+        None
+            Die Methode gibt nichts zurück, sondern setzt die Parameter der Schichten als Attribute der Instanz.
+        &#39;&#39;&#39;
+        if not self.architecture_called: # Wenn die Architektur des Modells noch nicht berechnet wurde
+            self.network_architecture() # Ruft die Methode network_architecture auf, um die Architektur zu berechnen
+            self.architecture_called = True # Setzt das Attribut architecture_called auf True
+        for i, schicht in enumerate(self.network_structure): # Iteriert über jede Schicht in der Liste der Schichten
+            if isinstance(schicht, (Dense, Conv2D)): # Wenn die Schicht eine Dense- oder Conv2D-Schicht ist
+                #print(&#34;Schicht: &#34;, schicht.__class__.__name__, &#34; input: &#34;, self.architektur[i])
+                schicht.initialize_parameters(self.layer_out_shape[i], self.optimierer_typ) # Ruft die Methode init_params der Schicht auf, um die Parameter zu initiieren
+            elif isinstance(schicht, BatchNorm): # Wenn die Schicht eine BatchNormalization-Schicht ist
+                schicht.initialize_parameters(self.layer_out_shape[i]) # Ruft die Methode init_params der Schicht auf, um die Parameter zu initiieren
+
+    def fit(self, X, y, epochs=10, batch_size=5, learnrate=1, X_val=None, y_val=None, verbose=1, learnrate_decay=None, **kwargs):
+        &#39;&#39;&#39;
+        Trainiert das Modell mit den gegebenen Trainingsdaten und optionalen Validierungsdaten.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+        X : array-like
+            Die Eingabedaten für das Training, z.B. ein Numpy-Array oder eine Liste von Arrays.
+        y : array-like
+            Die Ausgabedaten für das Training, z.B. ein Numpy-Array oder eine Liste von Arrays.
+        epochs : int, optional
+            Die Anzahl der Epochen, die das Modell trainieren soll. Der Standardwert ist 10.
+        batch_size : int, optional
+            Die Größe der Minibatches, die für das Training verwendet werden sollen. Der Standardwert ist 5.
+        learnrate : float, optional
+            Die Lernrate, die für den Optimierer verwendet werden soll. Der Standardwert ist 1.
+        X_val : array-like, optional
+            Die Eingabedaten für die Validierung, z.B. ein Numpy-Array oder eine Liste von Arrays. Wenn None, wird keine Validierung durchgeführt. Der Standardwert ist None.
+        y_val : array-like, optional
+            Die Ausgabedaten für die Validierung, z.B. ein Numpy-Array oder eine Liste von Arrays. Wenn None, wird keine Validierung durchgeführt. Der Standardwert ist None.
+        verbose : int, optional
+            Ein Schalter, der angibt, ob die Trainings- und Validierungsergebnisse nach jeder Epoche gedruckt werden sollen. Wenn 1, werden die Ergebnisse gedruckt. Wenn 0, werden die Ergebnisse nicht gedruckt. Der Standardwert ist 1.
+        learnrate_decay : function, optional
+            Eine Funktion, die die Lernrate nach jeder Iteration anpasst. Wenn None, wird keine Lernratenanpassung durchgeführt. Der Standardwert ist None.
+        **kwargs : dict, optional
+            Zusätzliche Schlüsselwortargumente, die an die Funktion learnrate_decay übergeben werden sollen.
+
+        Returns
+        -------
+        None
+            Die Methode gibt nichts zurück, sondern aktualisiert die Parameter des Modells und speichert die Trainings- und Validierungshistorie als Attribute der Instanz.
+        &#39;&#39;&#39;
+        self.historie = {&#39;Training Loss&#39;: [],&#39;Validation Loss&#39;: [], &#39;Training Accuracy&#39;: [],  &#39;Validation Accuracy&#39;: []} # Erstellt ein Wörterbuch, das die Trainings- und Validierungshistorie speichert
+        iterationen = 0 # Initialisiert die Anzahl der Iterationen auf 0
+        self.batch = batch_size # Speichert die Größe der Minibatches als Attribut
+        self.init_params() # Ruft die Methode init_params auf, um die Parameter des Modells zu initiieren
+        gesamt_num_batches = np.ceil(len(X)/batch_size) # Berechnet die Gesamtzahl der Minibatches
+
+        for epoch in range(epochs): # Iteriert über jede Epoche
+            kosten_train = 0 # Initialisiert die Trainingskosten auf 0
+            num_batches = 0 # Initialisiert die Anzahl der Minibatches auf 0
+            y_pred_train = [] # Initialisiert eine Liste, die die Vorhersagen des Modells für die Trainingsdaten speichert
+            y_train = [] # Initialisiert eine Liste, die die tatsächlichen Ausgaben für die Trainingsdaten speichert
+
+            print(f&#39;\nEpoch: {epoch+1}/{epochs}&#39;) # Druckt die aktuelle Epoche
+            with alive_bar(len(range(0, len(X), batch_size))) as bar:
+                for i in range(0, len(X), batch_size): # Iteriert über jede Minibatch
+                    X_batch = X[i:i+batch_size] # Extrahiert die Eingabedaten für die Minibatch
+                    y_batch = y[i:i+batch_size] # Extrahiert die Ausgabedaten für die Minibatch
+
+                    Z = X_batch.copy() # Erstellt eine Kopie der Eingabedaten
+
+                    # feed-forward
+                    for schicht in self.network_structure: # Iteriert über jede Schicht im Modell
+                        Z = schicht.forward(Z) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht zu berechnen
+                    
+                    # Trainingsgenauigkeit berechnen
+                    if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+                        y_pred_train += np.argmax(Z, axis=1).tolist() # Fügt die Vorhersagen des Modells für die Minibatch zur Liste der Vorhersagen hinzu
+                        y_train += np.argmax(y_batch, axis=1).tolist() # Fügt die tatsächlichen Ausgaben für die Minibatch zur Liste der Ausgaben hinzu
+
+                    # Kosten berechnen
+                    kosten_train += self.kosten.get_cost(Z, y_batch) / self.batch # Berechnet die Kosten für die Minibatch und addiert sie zu den Trainingskosten
+
+                    # dL/daL berechnen (letzter Schicht Rückpropagationsfehler)
+                    dZ = self.kosten.get_d_cost(Z, y_batch) # Berechnet den Fehler der letzten Schicht
+                    # Rückpropagation
+                    for schicht in self.network_structure[::-1]: # Iteriert über jede Schicht im Modell in umgekehrter Reihenfolge
+                        dZ = schicht.backpropagation(dZ) # Ruft die Methode rückpropagation der Schicht auf, um den Fehler an die vorherige Schicht weiterzugeben
+
+                    # Parameter aktualisieren
+                    for schicht in self.network_structure: # Iteriert über jede Schicht im Modell
+                        if isinstance(schicht, (Dense, BatchNorm, Conv2D)): # Wenn die Schicht eine Dense-, BatchNormalization- oder Conv2D-Schicht ist
+                            schicht.update(learnrate, self.batch, iterationen) # Ruft die Methode aktualisieren der Schicht auf, um die Parameter der Schicht zu aktualisieren
+
+                    # Lernratenzerfall
+                    if learnrate_decay is not None: # Wenn eine Lernratenanpassungsfunktion angegeben ist
+                        learnrate = learnrate_decay(iterationen, **kwargs) # Ruft die Funktion learnrate_decay auf, um die Lernrate anzupassen
+
+                    num_batches += 1 # Erhöht die Anzahl der Minibatches um 1
+                    iterationen += 1 # Erhöht die Anzahl der Iterationen um 1
+                    
+                    #update progress bar
+                    bar()
+                    
+            kosten_train /= num_batches # Berechnet den Durchschnitt der Trainingskosten für die Epoche
+
+            # Nur zum Drucken (Trainingsgenauigkeit, Validierungskosten und -genauigkeit)
+
+            text  = f&#39;Trainingskosten: {round(kosten_train, 4)} - &#39; # Erstellt einen Text, der die Trainingskosten enthält
+            self.historie[&#39;Training Loss&#39;].append(kosten_train) # Fügt die Trainingskosten zur Historie hinzu
+
+            # Trainingsgenauigkeit
+
+            if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+                genauigkeit_train = np.sum(np.array(y_pred_train) == np.array(y_train)) / len(y_train) # Berechnet die Trainingsgenauigkeit für die Epoche
+                text += f&#39;Trainingsgenauigkeit: {round(genauigkeit_train, 4)}&#39; # Fügt die Trainingsgenauigkeit zum Text hinzu
+                self.historie[&#39;Training Accuracy&#39;].append(genauigkeit_train) # Fügt die Trainingsgenauigkeit zur Historie hinzu
+            else: # Wenn die Kostenfunktion eine andere ist
+                text += f&#39;Trainingsgenauigkeit: {round(kosten_train, 4)}&#39; # Fügt die Trainingskosten als Genauigkeit zum Text hinzu
+                self.historie[&#39;Training Accuracy&#39;].append(kosten_train) # Fügt die Trainingskosten als Genauigkeit zur Historie hinzu
+
+            if X_val is not None: # Wenn Validierungsdaten angegeben sind
+                kosten_val, genauigkeit_val = self.evaluate(X_val, y_val, batch_size) # Ruft die Methode bewerten auf, um die Validierungskosten und -genauigkeit zu berechnen
+                text += f&#39; - Validierungskosten: {round(kosten_val, 4)} - &#39; 
+                self.historie[&#39;Validation Loss&#39;].append(kosten_val) 
+                text += f&#39;Validierungsgenauigkeit: {round(genauigkeit_val, 4)}&#39; 
+                self.historie[&#39;Validation Accuracy&#39;].append(genauigkeit_val) # Fügt die Validierungsgenauigkeit zur Historie hinzu
+
+            if verbose:
+                    print(text)
+            else:
+                print()
+    
+    def evaluate(self, X, y, batch_size=None):
+        &#39;&#39;&#39;
+        Testet das Modell mit den gegebenen Testdaten.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+        X : array-like
+            Die Eingabedaten für den Test, z.B. ein Numpy-Array oder eine Liste von Arrays.
+        y : array-like
+            Die Ausgabedaten für den Test, z.B. ein Numpy-Array oder eine Liste von Arrays.
+        batch_size : int, optional
+            Die Größe der Minibatches, die für den Test verwendet werden sollen. Wenn None, wird die Länge von X verwendet. Der Standardwert ist None.
+
+        Returns
+        -------
+        kosten : float
+            Die Kosten des Modells für die Testdaten, berechnet mit der Kostenfunktion des Modells.
+        genauigkeit : float
+            Die Genauigkeit des Modells für die Testdaten, berechnet als der Anteil der korrekten Vorhersagen.
+        &#39;&#39;&#39;
+        if batch_size is None: # Wenn keine Batch-Größe angegeben ist
+            batch_size = len(X) # Verwendet die Länge von X als Batch-Größe
+
+        kosten = 0 # Initialisiert die Kosten auf 0
+        richtig = 0 # Initialisiert die Anzahl der richtigen Vorhersagen auf 0
+        num_batches = 0 # Initialisiert die Anzahl der Minibatches auf 0
+        hilfe = Utility() # Erstellt ein Objekt der Klasse Utility
+        Y_1hot, _ = hilfe.onehot(y) # Wandelt die Ausgabedaten in One-Hot-Vektoren um
+
+        for i in range(0, len(X), batch_size): # Iteriert über jede Minibatch
+            X_batch = X[i:i+batch_size] # Extrahiert die Eingabedaten für die Minibatch
+            y_batch = y[i:i+batch_size] # Extrahiert die Ausgabedaten für die Minibatch
+            Y_1hot_batch = Y_1hot[i:i+batch_size] # Extrahiert die One-Hot-Vektoren für die Minibatch
+            Z = X_batch.copy() # Erstellt eine Kopie der Eingabedaten
+            for schicht in self.network_structure: # Iteriert über jede Schicht im Modell
+                if schicht.__class__.__name__==&#39;BatchNorm&#39;: # Wenn die Schicht eine BatchNormalization-Schicht ist
+                    Z = schicht.forward(Z, mode=&#39;test&#39;) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht im Testmodus zu berechnen
+                else: # Wenn die Schicht eine andere Art von Schicht ist
+                    Z = schicht.forward(Z) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht zu berechnen
+            if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+                kosten += self.kosten.get_cost(Z, Y_1hot_batch) / len(y_batch) # Berechnet die Kosten für die Minibatch und addiert sie zu den Gesamtkosten
+                y_pred = np.argmax(Z, axis=1).tolist() # Berechnet die Vorhersagen des Modells für die Minibatch
+                richtig += np.sum(y_pred == y_batch) # Zählt die Anzahl der richtigen Vorhersagen für die Minibatch
+            else: # Wenn die Kostenfunktion eine andere ist
+                kosten += self.kosten.get_cost(Z, y_batch) / len(y_batch) # Berechnet die Kosten für die Minibatch und addiert sie zu den Gesamtkosten
+
+            num_batches += 1 # Erhöht die Anzahl der Minibatches um 1
+
+        if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+            genauigkeit = richtig / len(y) # Berechnet die Genauigkeit des Modells für die Testdaten
+            kosten /= num_batches # Berechnet den Durchschnitt der Kosten für die Testdaten
+            return kosten, genauigkeit # Gibt die Kosten und die Genauigkeit zurück
+        else: # Wenn die Kostenfunktion eine andere ist
+            kosten /= num_batches # Berechnet den Durchschnitt der Kosten für die Testdaten
+            return kosten, kosten # Gibt die Kosten zweimal zurück
+
+    def loss_plot(self):
+        &#39;&#39;&#39;
+        Zeigt einen Plot der Trainings- und Validierungskosten pro Epoche an.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+
+        Returns
+        -------
+        None
+            Die Methode gibt nichts zurück, sondern zeigt den Plot auf dem Bildschirm an.
+        &#39;&#39;&#39;
+        plt.plot(self.historie[&#39;Training Loss&#39;], &#39;k&#39;) # Plottet die Trainingskosten in schwarz
+        if len(self.historie[&#39;Validation Loss&#39;])&gt;0: # Wenn es Validierungskosten gibt
+            plt.plot(self.historie[&#39;Validation Loss&#39;], &#39;r&#39;) # Plottet die Validierungskosten in rot
+            plt.legend([&#39;Training&#39;, &#39;Validierung&#39;], loc=&#39;upper right&#39;) # Fügt eine Legende mit den Namen der Kurven hinzu
+            plt.title(&#39;Modellkosten&#39;) # Fügt einen Titel für den Plot hinzu
+        else: # Wenn es keine Validierungskosten gibt
+            plt.title(&#39;Trainingskosten&#39;) # Fügt einen Titel für den Plot hinzu
+        plt.ylabel(&#39;Kosten&#39;) # Fügt eine Beschriftung für die y-Achse hinzu
+        plt.xlabel(&#39;Epoche&#39;) # Fügt eine Beschriftung für die x-Achse hinzu
+        plt.show() # Zeigt den Plot an
+
+    def accuracy_plot(self):
+        &#39;&#39;&#39;
+        Zeigt einen Plot der Trainings- und Validierungsgenauigkeit pro Epoche an.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+
+        Returns
+        -------
+        None
+            Die Methode gibt nichts zurück, sondern zeigt den Plot auf dem Bildschirm an.
+        &#39;&#39;&#39;
+        plt.plot(self.historie[&#39;Training Accuracy&#39;], &#39;k&#39;) # Plottet die Trainingsgenauigkeit in schwarz
+        if len(self.historie[&#39;Validation Accuracy&#39;])&gt;0: # Wenn es Validierungsgenauigkeit gibt
+            plt.plot(self.historie[&#39;Validation Accuracy&#39;], &#39;r&#39;) # Plottet die Validierungsgenauigkeit in rot
+            plt.legend([&#39;Training&#39;, &#39;Validierung&#39;], loc=&#39;lower right&#39;) # Fügt eine Legende mit den Namen der Kurven hinzu
+            plt.title(&#39;Modellgenauigkeit&#39;) # Fügt einen Titel für den Plot hinzu
+        else: # Wenn es keine Validierungsgenauigkeit gibt
+            plt.title(&#39;Trainingsgenauigkeit&#39;) # Fügt einen Titel für den Plot hinzu
+        plt.ylabel(&#39;Genauigkeit&#39;) # Fügt eine Beschriftung für die y-Achse hinzu
+        plt.xlabel(&#39;Epoche&#39;) # Fügt eine Beschriftung für die x-Achse hinzu
+        plt.show() # Zeigt den Plot an
+
+    def predict(self, X, batch_size=None):
+        &#39;&#39;&#39;
+        Erzeugt Vorhersagen des Modells für die gegebenen Eingabedaten.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+        X : array-like
+            Die Eingabedaten, für die das Modell Vorhersagen machen soll, z.B. ein Numpy-Array oder eine Liste von Arrays.
+        batch_size : int, optional
+            Die Größe der Minibatches, die für die Vorhersage verwendet werden sollen. Wenn None, wird die Länge von X verwendet. Der Standardwert ist None.
+
+        Returns
+        -------
+        y_pred : array-like
+            Die Vorhersagen des Modells für die Eingabedaten, z.B. ein Numpy-Array oder eine Liste von Arrays.
+        &#39;&#39;&#39;
+        if batch_size is None: # Wenn keine Batch-Größe angegeben ist
+            if len(X.shape) &lt;3: 
+                batch_size = 1
+                le = 1
+            else: 
+                batch_size = X.shape[0] # Verwendet die Länge von X als Batch-Größe
+                le = X.shape[0]
+        else: le = X.shape[0]
+        for i in range(0, le, batch_size): # Iteriert über jede Minibatch
+            X_batch = X[i:i+batch_size] # Extrahiert die Eingabedaten für die Minibatch
+            Z = X_batch.copy() # Erstellt eine Kopie der Eingabedaten
+            for schicht in self.network_structure: # Iteriert über jede Schicht im Modell
+                if schicht.__class__.__name__==&#39;BatchNorm&#39;: # Wenn die Schicht eine BatchNormalization-Schicht ist
+                    Z = schicht.forward(Z, mode=&#39;test&#39;) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht im Testmodus zu berechnen
+                else: # Wenn die Schicht eine andere Art von Schicht ist
+                    Z = schicht.forward(Z) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht zu berechnen
+            if i==0: # Wenn dies die erste Minibatch ist
+                if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+                    y_pred = np.argmax(Z, axis=1).tolist() # Berechnet die Vorhersagen des Modells für die Minibatch als eine Liste von Indizes
+                else: # Wenn die Kostenfunktion eine andere ist
+                    y_pred = Z # Speichert die Ausgabe des Modells für die Minibatch als ein Array
+            else: # Wenn dies nicht die erste Minibatch ist
+                if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+                    y_pred += np.argmax(Z, axis=1).tolist() # Fügt die Vorhersagen des Modells für die Minibatch zur Liste der Vorhersagen hinzu
+                else: # Wenn die Kostenfunktion eine andere ist
+                    y_pred = np.vstack((y_pred, Z)) # Stapelt die Ausgabe des Modells für die Minibatch unter der bisherigen Ausgabe
+
+        return np.array(y_pred) # Gibt die Vorhersagen des Modells für die Eingabedaten als ein Array zurück
+
+    #Sichere alle Parameter als pkl Datei
+    def save(self, fileName, saveJustParam = False):
+        &#39;&#39;&#39;
+        Speichert die Parameter des Netzes als eine pkl-Datei.
+
+        Diese Methode liest die Parameter der einzelnen Schichten aus und speichert sie mit den Schichten in einer Liste, die mit pickle in einer Datei gespeichert wird. Wenn saveJustParam auf True gesetzt ist, werden nur die Gewichte und Bias-Werte von Dense und Conv2D-Schichten gespeichert.
+
+        Parameters
+        ----------
+        fileName : str
+            Der Name der Datei, in der die Parameter gespeichert werden sollen.
+        saveJustParam : bool, optional
+            Ob nur die Gewichte und Bias-Werte gespeichert werden sollen. Standardmäßig auf False gesetzt.
+
+        Returns
+        -------
+        None
+
+        Raises
+        ------
+        ValueError
+            Wenn eine Schicht einen unbekannten oder nicht unterstützten Typ hat.
+        &#39;&#39;&#39;
+        #Ließ die Parameter der einzelnen Schichten aus und speichere sie mit den Schichten in struc
+        if not saveJustParam: 
+            struc = [self.input_shape, ] #Struktur des Netzes mit Schichtklasse und Parameter
+            for layer in self.network_structure:
+                schicht = [] #Schichtklasse und Parameter
+                if isinstance(layer, Conv2D): 
+                    schicht.append(&#34;Conv2D&#34;)
+                    param = (layer.Kernel, layer.kernel_size, layer.stride, layer.padding_type,
+             layer.activation_type, layer.use_bias, layer.weight_initializer_type,
+             layer.kernel_regularizer, layer.seed, layer.input_shape, layer.bias)
+                    schicht.append(param)
+                elif isinstance(layer, Pooling2D):
+                    schicht.append(&#34;Pooling2D&#34;)
+                    param = (layer.kernelSize, layer.stride, layer.padding_type, layer.pool_type)
+                    schicht.append(param)
+                elif isinstance(layer, Dense):
+                    schicht.append(&#34;Dense&#34;)
+                    param = (layer.neurons, layer.activation_type, layer.use_bias,
+                 layer.weight_initializer_type, layer.weight_regularizer, layer.seed, layer.input_dim, layer.weight, layer.bias)
+                    schicht.append(param)
+                elif isinstance(layer, Flatten):
+                    schicht.append(&#34;Flatten&#34;)
+                    param = ()
+                    schicht.append(param)
+                elif isinstance(layer, Dropout):
+                    schicht.append(&#34;Dropout&#34;)
+                    param = (layer.p)
+                    schicht.append(param)
+                else: raise ValueError(&#34;Der folgende Schichtyp: &#34;, type(layer), &#34; ist unbekannt oder wird nicht unterstützt&#34;)
+                struc.append(schicht)
+        else:# Speichere nur die Gewichte und Bias Werte von Dens und Conv2D
+            struc = []
+            for layer in self.network_structure:
+                schicht = []
+                if isinstance(layer, Conv2D):
+                    schicht.append(&#34;Conv2D&#34;)
+                    param = (layer.Kernel, layer.bias)
+                    schicht.append(param)
+                elif isinstance(layer, Dense):
+                    schicht.append(&#34;Dense&#34;)
+                    param = (layer.weight, layer.bias)
+                    schicht.append(param)
+                else: schicht = None
+                struc.append(schicht)
+        print(&#34;Parameter des Netzes geladen&#34;)
+         
+        #Speicher die struc Liste mit pickle in fileName
+        with open(fileName, &#34;wb&#34;) as datei:
+            pickle.dump(struc, datei)
+        print(&#34;Parameter Abgespeichert&#34;)
+    
+    def load(self, fileName, loadStruc = True):
+        
+        &#34;&#34;&#34;
+        Lädt die Parameter des Netzes aus einer pkl-Datei.
+
+        Diese Methode lädt eine Liste mit den Schichten und ihren Parametern aus einer Datei, die mit pickle gespeichert wurde. Wenn loadStruc auf True gesetzt ist, werden alle Schichten und ihre Parameter geladen. Wenn loadStruc auf False gesetzt ist, werden nur die Gewichte und Bias-Werte von Dense und Conv2D-Schichten geladen. Die geladenen Schichten werden dem Netz hinzugefügt.
+
+        Parameters
+        ----------
+        fileName : str
+            Der Name der Datei, aus der die Parameter geladen werden sollen.
+        loadStruc : bool, optional
+            Ob alle Schichten und ihre Parameter oder nur die Gewichte und Bias-Werte geladen werden sollen. Standardmäßig auf True gesetzt.
+
+        Returns
+        -------
+        None
+
+        Raises
+        ------
+        ValueError
+            Wenn eine Schicht einen unbekannten oder nicht unterstützten Typ hat.
+        &#34;&#34;&#34;
+        
+        #load the struc list with pickle
+        with open(fileName, &#34;rb&#34;) as datei:
+            struc = pickle.load(datei)
+        print(&#34;Parameter geladen&#34;)
+        
+        input_shape = struc[0]
+        self.add(self.Input(input_shape=input_shape))
+        #für jede Schicht in struc erstelle den Layer und füge ihn zum Netz hinzu
+        for layer in struc[1:]:
+            if layer[0] == &#34;Conv2D&#34;:
+                self.add(Conv2D(*layer[1]))
+            elif layer[0] == &#34;Pooling2D&#34;:
+                self.add( Pooling2D(*layer[1]))
+            elif layer[0] == &#34;Dense&#34;:
+                self.add( Dense(*layer[1]))
+            elif layer[0] == &#34;Flatten&#34;:
+                self.add(Flatten())
+            elif layer[0] == &#34;Dropout&#34;:
+                self.add(Dropout(layer[1]))     
+            else: raise ValueError(&#34;Der folgende Schichtyp: &#34;, layer[0], &#34; ist unbekannt oder wird nicht unterstützt&#34;)
+        print(&#34;Netz mit Prametern erstellt&#34;)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="Neural.Network.BatchNorm"><code class="flex name class">
+<span>class <span class="ident">BatchNorm</span></span>
+<span>(</span><span>beta=0.9, eta=1e-06)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Der Initialisierer der BatchReg-Klasse. Setzt das Beta und Eta.</p>
+<p>Parameter:
+beta: Beta für den moving average
+eta: 𝜂, Kleiner Float, der zur Varianz addiert wird, um Nullteiler zu vermeiden</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class BatchNorm:
+    
+    def __init__(self, beta=0.9, eta=1e-6):
+        &#39;&#39;&#39;
+        Der Initialisierer der BatchReg-Klasse. Setzt das Beta und Eta.
+        
+        Parameter:
+        beta: Beta für den moving average
+        eta: 𝜂, Kleiner Float, der zur Varianz addiert wird, um Nullteiler zu vermeiden
+        &#39;&#39;&#39;
+        self.eta = eta
+        self.beta = beta
+
+    def init_params(self, m):
+        &#39;&#39;&#39;
+        Diese Funktion legt die Parameter der Batch-Normalisierungs-Schicht fest.
+        
+        Parameter:
+        m: Shape des Inputs zur BN-Schicht
+        &#39;&#39;&#39;
+        self.gamma = np.ones((m))
+        self.alpha, self.avg, self.std  = np.zeros((m)), np.zeros((m)), np.zeros((m))
+
+    def forward(self, x, mode=&#39;train&#39;):
+        &#39;&#39;&#39;
+        Diese Funktion macht die Forward-Propagation. Sie rechnet den Mittelwert und die Varianz des Inputs aus, 
+        normalisiert den Input und skaliert und verschiebt ihn dann.
+        
+        Parameter:
+        x: Input zur BN-Schicht
+        mode: Forward-Pass, der für das Training oder den Test benutzt wird
+        
+        Output:
+        y: Die normalisierten, skalierten und verschobenen Input-Daten. Dieser Output wird zur nächsten Schicht im Netzwerk weitergegeben.
+        &#39;&#39;&#39;
+        if mode==&#39;train&#39;:
+            self.s, self.m = x.shape
+            self.mu = np.mean(x, axis = 0) # 𝜇
+            self.var = np.var(x, axis=0) # 𝜎^2
+            self.xmu = x - self.mu # x - 𝜇
+            self.ivar = 1 / np.sqrt(self.var + self.eta) # 𝜎𝑖𝑛𝑣
+            self.xhat = self.xmu * self.ivar
+            y = self.gamma*self.xhat + self.alpha # yl
+            self.avg = self.beta * self.avg + (1 - self.beta) * self.mu
+            self.std = self.beta * self.std + (1 - self.beta) * self.var
+        elif mode==&#39;test&#39;:
+            y = self.gamma * ((x - self.avg) / np.sqrt(self.std + self.eta)) + self.alpha
+        else:
+            raise ValueError(&#39;Ungültiger Forward-Batchnorm-Modus &#34;%s&#34;&#39; % mode)
+        return y
+
+    def backpropagation(self, dy):
+        &#39;&#39;&#39;
+        Diese Funktion macht die Backward-Propagation. Sie rechnet die Gradienten der Skalierungs- und Verschiebungsparameter 
+        und den Gradienten des Inputs aus.
+        
+        Parameter:
+        dy: Gradient des Outputs
+        
+        Output:
+        dx: Der Gradient des Inputs zur BN-Schicht. Dieser Gradient wird zur vorherigen Schicht im Netzwerk zurückgegeben und zum Updaten der Gewichte und des Bias in dieser Schicht benutzt.
+        &#39;&#39;&#39;
+        self.dgamma = np.sum(dy * self.xhat, axis=0)
+        self.dalpha = np.sum(dy, axis=0)
+        dxhat = dy * self.gamma
+        dvar = np.sum(dxhat * self.xmu * (-.5) * (self.ivar**3), axis=0)
+        dmu = np.sum(dxhat * (-self.ivar), axis=0)
+        dx = dxhat * self.ivar + dvar * (2/self.s) * self.xmu + (1/self.s)*dmu
+        return dx
+
+    def update(self, learnrate, size, k):
+        &#39;&#39;&#39;
+        Diese Funktion updatet die Skalierungs- und Verschiebungsparameter basierend auf den während der Backward-Propagation 
+        ausgerechneten Gradienten.
+        
+        Parameter:
+        learnrate: Lernrate
+        size: Batch-Size (Anzahl der Samples im Batch)
+        k: Iterationsnummer
+        &#39;&#39;&#39;
+        self.gamma -= self.dgamma*(learnrate/size)
+        self.alpha -= self.dalpha*(learnrate/size)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="Neural.Network.BatchNorm.backpropagation"><code class="name flex">
+<span>def <span class="ident">backpropagation</span></span>(<span>self, dy)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Diese Funktion macht die Backward-Propagation. Sie rechnet die Gradienten der Skalierungs- und Verschiebungsparameter
+und den Gradienten des Inputs aus.</p>
+<p>Parameter:
+dy: Gradient des Outputs</p>
+<p>Output:
+dx: Der Gradient des Inputs zur BN-Schicht. Dieser Gradient wird zur vorherigen Schicht im Netzwerk zurückgegeben und zum Updaten der Gewichte und des Bias in dieser Schicht benutzt.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def backpropagation(self, dy):
+    &#39;&#39;&#39;
+    Diese Funktion macht die Backward-Propagation. Sie rechnet die Gradienten der Skalierungs- und Verschiebungsparameter 
+    und den Gradienten des Inputs aus.
+    
+    Parameter:
+    dy: Gradient des Outputs
+    
+    Output:
+    dx: Der Gradient des Inputs zur BN-Schicht. Dieser Gradient wird zur vorherigen Schicht im Netzwerk zurückgegeben und zum Updaten der Gewichte und des Bias in dieser Schicht benutzt.
+    &#39;&#39;&#39;
+    self.dgamma = np.sum(dy * self.xhat, axis=0)
+    self.dalpha = np.sum(dy, axis=0)
+    dxhat = dy * self.gamma
+    dvar = np.sum(dxhat * self.xmu * (-.5) * (self.ivar**3), axis=0)
+    dmu = np.sum(dxhat * (-self.ivar), axis=0)
+    dx = dxhat * self.ivar + dvar * (2/self.s) * self.xmu + (1/self.s)*dmu
+    return dx</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.BatchNorm.forward"><code class="name flex">
+<span>def <span class="ident">forward</span></span>(<span>self, x, mode='train')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Diese Funktion macht die Forward-Propagation. Sie rechnet den Mittelwert und die Varianz des Inputs aus,
+normalisiert den Input und skaliert und verschiebt ihn dann.</p>
+<p>Parameter:
+x: Input zur BN-Schicht
+mode: Forward-Pass, der für das Training oder den Test benutzt wird</p>
+<p>Output:
+y: Die normalisierten, skalierten und verschobenen Input-Daten. Dieser Output wird zur nächsten Schicht im Netzwerk weitergegeben.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def forward(self, x, mode=&#39;train&#39;):
+    &#39;&#39;&#39;
+    Diese Funktion macht die Forward-Propagation. Sie rechnet den Mittelwert und die Varianz des Inputs aus, 
+    normalisiert den Input und skaliert und verschiebt ihn dann.
+    
+    Parameter:
+    x: Input zur BN-Schicht
+    mode: Forward-Pass, der für das Training oder den Test benutzt wird
+    
+    Output:
+    y: Die normalisierten, skalierten und verschobenen Input-Daten. Dieser Output wird zur nächsten Schicht im Netzwerk weitergegeben.
+    &#39;&#39;&#39;
+    if mode==&#39;train&#39;:
+        self.s, self.m = x.shape
+        self.mu = np.mean(x, axis = 0) # 𝜇
+        self.var = np.var(x, axis=0) # 𝜎^2
+        self.xmu = x - self.mu # x - 𝜇
+        self.ivar = 1 / np.sqrt(self.var + self.eta) # 𝜎𝑖𝑛𝑣
+        self.xhat = self.xmu * self.ivar
+        y = self.gamma*self.xhat + self.alpha # yl
+        self.avg = self.beta * self.avg + (1 - self.beta) * self.mu
+        self.std = self.beta * self.std + (1 - self.beta) * self.var
+    elif mode==&#39;test&#39;:
+        y = self.gamma * ((x - self.avg) / np.sqrt(self.std + self.eta)) + self.alpha
+    else:
+        raise ValueError(&#39;Ungültiger Forward-Batchnorm-Modus &#34;%s&#34;&#39; % mode)
+    return y</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.BatchNorm.init_params"><code class="name flex">
+<span>def <span class="ident">init_params</span></span>(<span>self, m)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Diese Funktion legt die Parameter der Batch-Normalisierungs-Schicht fest.</p>
+<p>Parameter:
+m: Shape des Inputs zur BN-Schicht</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def init_params(self, m):
+    &#39;&#39;&#39;
+    Diese Funktion legt die Parameter der Batch-Normalisierungs-Schicht fest.
+    
+    Parameter:
+    m: Shape des Inputs zur BN-Schicht
+    &#39;&#39;&#39;
+    self.gamma = np.ones((m))
+    self.alpha, self.avg, self.std  = np.zeros((m)), np.zeros((m)), np.zeros((m))</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.BatchNorm.update"><code class="name flex">
+<span>def <span class="ident">update</span></span>(<span>self, learnrate, size, k)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Diese Funktion updatet die Skalierungs- und Verschiebungsparameter basierend auf den während der Backward-Propagation
+ausgerechneten Gradienten.</p>
+<p>Parameter:
+learnrate: Lernrate
+size: Batch-Size (Anzahl der Samples im Batch)
+k: Iterationsnummer</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def update(self, learnrate, size, k):
+    &#39;&#39;&#39;
+    Diese Funktion updatet die Skalierungs- und Verschiebungsparameter basierend auf den während der Backward-Propagation 
+    ausgerechneten Gradienten.
+    
+    Parameter:
+    learnrate: Lernrate
+    size: Batch-Size (Anzahl der Samples im Batch)
+    k: Iterationsnummer
+    &#39;&#39;&#39;
+    self.gamma -= self.dgamma*(learnrate/size)
+    self.alpha -= self.dalpha*(learnrate/size)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="Neural.Network.Network"><code class="flex name class">
+<span>class <span class="ident">Network</span></span>
+<span>(</span><span>layers=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Erzeugt ein sequentielles CNN-Modell.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>layers</code></strong> :&ensp;<code>list</code>, optional</dt>
+<dd>Eine Liste von Schichten, die dem Modell hinzugefügt werden sollen.
+Wenn None, wird eine leere Liste erstellt. Der Standardwert ist None.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Network:
+    
+    def __init__(self, layers=None):
+        &#39;&#39;&#39;
+        Erzeugt ein sequentielles CNN-Modell.
+
+        Parameters
+        ----------
+        layers : list, optional
+            Eine Liste von Schichten, die dem Modell hinzugefügt werden sollen.
+            Wenn None, wird eine leere Liste erstellt. Der Standardwert ist None.
+        &#39;&#39;&#39;
+        if layers is None:
+            self.network_structure = []
+        else:
+            self.network_structure = layers
+        self.architecture_called = False # Ein Attribut, das angibt, ob die Architektur des Modells berechnet wurde
+
+    def add(self, schicht):
+        &#39;&#39;&#39;
+        Fügt eine Schicht zum Modell hinzu.
+
+        Parameters
+        ----------
+        schicht : object
+            Ein Objekt, das eine Schicht repräsentiert, z.B. Conv2D, Dense, etc.
+        &#39;&#39;&#39;
+        # Fügt die Schicht zur Liste der Schichten hinzu
+        self.network_structure.append(schicht)
+
+    def Input(self, input_shape):
+        &#39;&#39;&#39;
+        Definiert die Eingabeform des Modells.
+
+        Parameters
+        ----------
+        input_shape : tuple
+            Ein Tupel, das die Form der Eingabedaten angibt, z.B. (3, 32, 32) für RGB-Bilder mit 32x32 Pixeln.
+        &#39;&#39;&#39;
+        self.input_shape = input_shape # Die Dimension der Eingabe
+        self.layer_out_shape = [self.input_shape] # Eine Liste, die die Ausgabeform jeder Schicht speichert
+        self.schicht_name = [&#34;Input&#34;] # Eine Liste, die die Namen jeder Schicht speichert
+
+    def network_architecture(self):
+        &#39;&#39;&#39;
+        Berechnet die Architektur des Modells basierend auf den hinzugefügten Schichten.
+        &#39;&#39;&#39;
+        for schicht in self.network_structure: # Iteriert über jede Schicht in der Liste
+            if isinstance(schicht, Conv2D): # Wenn die Schicht eine Conv2D-Schicht ist
+                if schicht.input_shape_x is not None: # Wenn die Schicht eine Eingabeform definiert hat
+                    self.Input(schicht.input_shape_x) # Ruft die Input-Methode mit dieser Form auf
+                schicht.get_dimensions(self.layer_out_shape[-1]) # Berechnet die Ausgabeform der Schicht basierend auf der vorherigen Schicht
+                self.layer_out_shape.append(schicht.output_shape) # Fügt die Ausgabeform zur Architekturliste hinzu
+                self.schicht_name.append(schicht.__class__.__name__) # Fügt den Namen der Schicht zur Namensliste hinzu
+            elif isinstance(schicht, (Flatten, Pooling2D)): # Wenn die Schicht eine Flatten- oder Pooling2D-Schicht ist
+                schicht.get_dimensions(self.layer_out_shape[-1]) # Berechnet die Ausgabeform der Schicht basierend auf der vorherigen Schicht
+                self.layer_out_shape.append(schicht.output_shape) # Fügt die Ausgabeform zur Architekturliste hinzu
+                self.schicht_name.append(schicht.__class__.__name__) # Fügt den Namen der Schicht zur Namensliste hinzu
+            elif isinstance(schicht, Dense): # Wenn die Schicht eine Dense-Schicht ist
+                self.layer_out_shape.append(schicht.neurons) # Fügt die Anzahl der Neuronen zur Architekturliste hinzu
+                self.schicht_name.append(schicht.__class__.__name__) # Fügt den Namen der Schicht zur Namensliste hinzu
+            else: # Wenn die Schicht eine andere Art von Schicht ist
+                self.layer_out_shape.append(self.layer_out_shape[-1]) # Fügt die gleiche Ausgabeform wie die vorherige Schicht zur Architekturliste hinzu
+                self.schicht_name.append(schicht.__class__.__name__) # Fügt den Namen der Schicht zur Namensliste hinzu
+
+        self.network_structure = list(filter(None, self.network_structure)) # Entfernt alle None-Elemente aus der Schichtenliste
+        try:
+            idx = self.schicht_name.index(&#34;NoneType&#34;) # Sucht nach dem Index eines NoneType-Elements in der Namensliste
+            del self.schicht_name[idx] # Löscht das Element an diesem Index aus der Namensliste
+            del self.layer_out_shape[idx] # Löscht das Element an diesem Index aus der Architekturliste
+        except:
+            pass
+        
+    def summary(self, name = &#34;Network&#34;):
+           
+        if self.architecture_called==False: # Wenn die Architektur des Modells noch nicht berechnet wurde
+            self.network_architecture() # Ruft die Methode network_architecture auf, um die Architektur zu berechnen
+            self.architecture_called = True # Setzt das Attribut architecture_called auf True
+        len_zugewiesen = [45, 26, 15] # Eine Liste von Längen, die für die Spalten der Zusammenfassung zugewiesen werden
+        anzahl = {&#39;Dense&#39;: 1, &#39;Activation&#39;: 1, &#39;Input&#39;: 1,
+                &#39;BatchNorm&#39;: 1, &#39;Dropout&#39;: 1, &#39;Conv2D&#39;: 1,
+                &#39;Pooling2D&#39;: 1, &#39;Flatten&#39;: 1} # Ein Wörterbuch, das die Anzahl jeder Schichtart speichert
+
+        column = [&#39;Layer (type)&#39;, &#39;Output Shape&#39;, &#39;# of Parameters&#39;] # Eine Liste von Spaltennamen für die Zusammenfassung
+
+        print(&#34;Model: &#34;, name) # Druckt den Namen des Modells
+        print(&#39;-&#39;*sum(len_zugewiesen)) # Druckt eine Trennlinie
+        
+        text = &#39;&#39; # Initialisiert einen leeren Text
+        for i in range(3): # Iteriert über die drei Spalten
+            text += column[i] + &#39; &#39;*(len_zugewiesen[i]-len(column[i])) # Fügt den Spaltennamen und die erforderlichen Leerzeichen zum Text hinzu
+        print(text) # Druckt den Text
+
+        print(&#39;#&#39;*sum(len_zugewiesen)) # Druckt eine Trennlinie
+
+        gesamt_params = 0 # Initialisiert die Gesamtzahl der Parameter auf 0
+        trainierbar_params = 0 # Initialisiert die Anzahl der trainierbaren Parameter auf 0
+        nicht_trainierbar_params = 0 # Initialisiert die Anzahl der nicht trainierbaren Parameter auf 0
+
+        for i in range(len(self.schicht_name)): # Iteriert über jede Schicht in der Namensliste
+            # layer name
+            schicht_name = self.schicht_name[i] # Speichert den Namen der Schicht
+            name = schicht_name.lower() + &#39;_&#39; + str(anzahl[schicht_name]) + &#39; &#39; + &#39;(&#39; + schicht_name + &#39;)&#39; # Erstellt einen eindeutigen Namen für die Schicht mit ihrer Nummer und ihrem Typ
+            anzahl[schicht_name] += 1 # Erhöht die Anzahl dieser Schichtart um 1
+
+            # output shape
+            try: # Versucht, die Ausgabeform der Schicht als Tupel zu erstellen
+                out = &#39;(None, &#39; # Beginnt das Tupel mit None für die Batch-Dimension
+                for n in range(len(self.layer_out_shape[i])-1): # Iteriert über die restlichen Dimensionen außer der letzten
+                    out += str(self.layer_out_shape[i][n]) + &#39;, &#39; # Fügt die Dimension und ein Komma zum Tupel hinzu
+                out += str(self.layer_out_shape[i][-1]) + &#39;)&#39;
+            except: # Wenn die Ausgabeform keine Tupel ist
+                out = &#39;(None, &#39; + str(self.layer_out_shape[i]) + &#39;)&#39; 
+
+            # number of params
+            if schicht_name==&#39;Dense&#39;: 
+                h0 = self.layer_out_shape[i-1] 
+                h1 = self.layer_out_shape[i]
+                if self.network_structure[i-1].use_bias: 
+                    params = h0*h1 + h1 
+                else: 
+                    params = h0*h1 
+                gesamt_params += params 
+                trainierbar_params += params
+            elif schicht_name==&#39;BatchNorm&#39;: # Wenn die Schicht eine BatchNormalization-Schicht ist
+                h = self.layer_out_shape[i] # Speichert die Anzahl der Merkmale
+                params = 4*h # Berechnet die Anzahl der Parameter als das Vierfache der Merkmale
+                trainierbar_params += 2*h # Addiert die Hälfte der Parameter zur Anzahl der trainierbaren Parameter hinzu
+                nicht_trainierbar_params += 2*h # Addiert die Hälfte der Parameter zur Anzahl der nicht trainierbaren Parameter hinzu
+                gesamt_params += params # Addiert die Anzahl der Parameter zur Gesamtzahl hinzu
+            elif schicht_name==&#39;Conv2D&#39;: # Wenn die Schicht eine Conv2D-Schicht ist
+                layer = self.network_structure[i-1] # Speichert die Schicht als ein Objekt
+                if layer.use_bias: # Wenn die Schicht einen Bias-Vektor verwendet
+                    add_b = 1 # Speichert eine zusätzliche Einheit für den Bias
+                else: # Wenn die Schicht keinen Bias-Vektor verwendet
+                    add_b = 0 # Speichert keine zusätzliche Einheit für den Bias
+                params = ((layer.inputC * layer.kernelH * layer.kernelW) + add_b) * layer.F # Berechnet die Anzahl der Parameter als das Produkt der Eingangskanäle, der Kernelhöhe, der Kernelbreite und der Anzahl der Filter plus die zusätzliche Einheit für den Bias
+                trainierbar_params += params # Addiert die Anzahl der Parameter zur Anzahl der trainierbaren Parameter hinzu
+                gesamt_params += params # Addiert die Anzahl der Parameter zur Gesamtzahl hinzu
+            else: 
+                
+                params = 0 
+            namen = [name, out, str(params)] 
+            # print this row
+            text = &#39;&#39; # Initialisiert einen leeren Text
+            for j in range(3): # Iteriert über die drei Spalten
+                text += namen[j] + &#39; &#39;*(len_zugewiesen[j]-len(namen[j])) 
+            print(text) # Druckt den Text
+            if i!=(len(self.schicht_name)-1):
+                print(&#39;.&#39;*sum(len_zugewiesen))
+            else:
+                print(&#39;#&#39;*sum(len_zugewiesen))
+        
+        print(&#34;Trainable params:&#34;, trainierbar_params) 
+        print(&#34;Non-trainable params:&#34;, nicht_trainierbar_params) # Druckt die Anzahl der nicht trainierbaren Parameter
+        print(&#34;Total params:&#34;, gesamt_params)
+        print(&#39;-&#39;*sum(len_zugewiesen)) # Druckt eine Trennlinie
+    
+    def compile(self, kosten_typ, optimierer_typ):
+        &#39;&#39;&#39;
+        Fertigt das Modell mit einer Kostenfunktion und einem Optimierer an.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+        kosten_typ : str
+            Der Name der Kostenfunktion, die für das Modell verwendet werden soll, z.B. &#34;cross-entropy&#34; oder &#34;mse&#34;.
+        optimierer_typ : str
+            Der Name des Optimierers, der für das Modell verwendet werden soll, z.B. &#34;sgd&#34; oder &#34;adam&#34;.
+
+        Returns
+        -------
+        None
+            Die Methode gibt nichts zurück, sondern setzt die Attribute kosten, kosten_typ und optimierer_typ der Instanz.
+        &#39;&#39;&#39;
+        self.kosten = Cost(kosten_typ) # Erstellt ein Objekt der Klasse Cost mit der angegebenen Kostenfunktion
+        self.kosten_typ = kosten_typ # Speichert den Namen der Kostenfunktion als Attribut
+        self.optimierer_typ = optimierer_typ # Speichert den Namen des Optimierers als Attribut
+
+    def init_params(self):
+        &#39;&#39;&#39;
+        Initiiert die Parameter des Modells basierend auf den hinzugefügten Schichten.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+
+        Returns
+        -------
+        None
+            Die Methode gibt nichts zurück, sondern setzt die Parameter der Schichten als Attribute der Instanz.
+        &#39;&#39;&#39;
+        if not self.architecture_called: # Wenn die Architektur des Modells noch nicht berechnet wurde
+            self.network_architecture() # Ruft die Methode network_architecture auf, um die Architektur zu berechnen
+            self.architecture_called = True # Setzt das Attribut architecture_called auf True
+        for i, schicht in enumerate(self.network_structure): # Iteriert über jede Schicht in der Liste der Schichten
+            if isinstance(schicht, (Dense, Conv2D)): # Wenn die Schicht eine Dense- oder Conv2D-Schicht ist
+                #print(&#34;Schicht: &#34;, schicht.__class__.__name__, &#34; input: &#34;, self.architektur[i])
+                schicht.initialize_parameters(self.layer_out_shape[i], self.optimierer_typ) # Ruft die Methode init_params der Schicht auf, um die Parameter zu initiieren
+            elif isinstance(schicht, BatchNorm): # Wenn die Schicht eine BatchNormalization-Schicht ist
+                schicht.initialize_parameters(self.layer_out_shape[i]) # Ruft die Methode init_params der Schicht auf, um die Parameter zu initiieren
+
+    def fit(self, X, y, epochs=10, batch_size=5, learnrate=1, X_val=None, y_val=None, verbose=1, learnrate_decay=None, **kwargs):
+        &#39;&#39;&#39;
+        Trainiert das Modell mit den gegebenen Trainingsdaten und optionalen Validierungsdaten.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+        X : array-like
+            Die Eingabedaten für das Training, z.B. ein Numpy-Array oder eine Liste von Arrays.
+        y : array-like
+            Die Ausgabedaten für das Training, z.B. ein Numpy-Array oder eine Liste von Arrays.
+        epochs : int, optional
+            Die Anzahl der Epochen, die das Modell trainieren soll. Der Standardwert ist 10.
+        batch_size : int, optional
+            Die Größe der Minibatches, die für das Training verwendet werden sollen. Der Standardwert ist 5.
+        learnrate : float, optional
+            Die Lernrate, die für den Optimierer verwendet werden soll. Der Standardwert ist 1.
+        X_val : array-like, optional
+            Die Eingabedaten für die Validierung, z.B. ein Numpy-Array oder eine Liste von Arrays. Wenn None, wird keine Validierung durchgeführt. Der Standardwert ist None.
+        y_val : array-like, optional
+            Die Ausgabedaten für die Validierung, z.B. ein Numpy-Array oder eine Liste von Arrays. Wenn None, wird keine Validierung durchgeführt. Der Standardwert ist None.
+        verbose : int, optional
+            Ein Schalter, der angibt, ob die Trainings- und Validierungsergebnisse nach jeder Epoche gedruckt werden sollen. Wenn 1, werden die Ergebnisse gedruckt. Wenn 0, werden die Ergebnisse nicht gedruckt. Der Standardwert ist 1.
+        learnrate_decay : function, optional
+            Eine Funktion, die die Lernrate nach jeder Iteration anpasst. Wenn None, wird keine Lernratenanpassung durchgeführt. Der Standardwert ist None.
+        **kwargs : dict, optional
+            Zusätzliche Schlüsselwortargumente, die an die Funktion learnrate_decay übergeben werden sollen.
+
+        Returns
+        -------
+        None
+            Die Methode gibt nichts zurück, sondern aktualisiert die Parameter des Modells und speichert die Trainings- und Validierungshistorie als Attribute der Instanz.
+        &#39;&#39;&#39;
+        self.historie = {&#39;Training Loss&#39;: [],&#39;Validation Loss&#39;: [], &#39;Training Accuracy&#39;: [],  &#39;Validation Accuracy&#39;: []} # Erstellt ein Wörterbuch, das die Trainings- und Validierungshistorie speichert
+        iterationen = 0 # Initialisiert die Anzahl der Iterationen auf 0
+        self.batch = batch_size # Speichert die Größe der Minibatches als Attribut
+        self.init_params() # Ruft die Methode init_params auf, um die Parameter des Modells zu initiieren
+        gesamt_num_batches = np.ceil(len(X)/batch_size) # Berechnet die Gesamtzahl der Minibatches
+
+        for epoch in range(epochs): # Iteriert über jede Epoche
+            kosten_train = 0 # Initialisiert die Trainingskosten auf 0
+            num_batches = 0 # Initialisiert die Anzahl der Minibatches auf 0
+            y_pred_train = [] # Initialisiert eine Liste, die die Vorhersagen des Modells für die Trainingsdaten speichert
+            y_train = [] # Initialisiert eine Liste, die die tatsächlichen Ausgaben für die Trainingsdaten speichert
+
+            print(f&#39;\nEpoch: {epoch+1}/{epochs}&#39;) # Druckt die aktuelle Epoche
+            with alive_bar(len(range(0, len(X), batch_size))) as bar:
+                for i in range(0, len(X), batch_size): # Iteriert über jede Minibatch
+                    X_batch = X[i:i+batch_size] # Extrahiert die Eingabedaten für die Minibatch
+                    y_batch = y[i:i+batch_size] # Extrahiert die Ausgabedaten für die Minibatch
+
+                    Z = X_batch.copy() # Erstellt eine Kopie der Eingabedaten
+
+                    # feed-forward
+                    for schicht in self.network_structure: # Iteriert über jede Schicht im Modell
+                        Z = schicht.forward(Z) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht zu berechnen
+                    
+                    # Trainingsgenauigkeit berechnen
+                    if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+                        y_pred_train += np.argmax(Z, axis=1).tolist() # Fügt die Vorhersagen des Modells für die Minibatch zur Liste der Vorhersagen hinzu
+                        y_train += np.argmax(y_batch, axis=1).tolist() # Fügt die tatsächlichen Ausgaben für die Minibatch zur Liste der Ausgaben hinzu
+
+                    # Kosten berechnen
+                    kosten_train += self.kosten.get_cost(Z, y_batch) / self.batch # Berechnet die Kosten für die Minibatch und addiert sie zu den Trainingskosten
+
+                    # dL/daL berechnen (letzter Schicht Rückpropagationsfehler)
+                    dZ = self.kosten.get_d_cost(Z, y_batch) # Berechnet den Fehler der letzten Schicht
+                    # Rückpropagation
+                    for schicht in self.network_structure[::-1]: # Iteriert über jede Schicht im Modell in umgekehrter Reihenfolge
+                        dZ = schicht.backpropagation(dZ) # Ruft die Methode rückpropagation der Schicht auf, um den Fehler an die vorherige Schicht weiterzugeben
+
+                    # Parameter aktualisieren
+                    for schicht in self.network_structure: # Iteriert über jede Schicht im Modell
+                        if isinstance(schicht, (Dense, BatchNorm, Conv2D)): # Wenn die Schicht eine Dense-, BatchNormalization- oder Conv2D-Schicht ist
+                            schicht.update(learnrate, self.batch, iterationen) # Ruft die Methode aktualisieren der Schicht auf, um die Parameter der Schicht zu aktualisieren
+
+                    # Lernratenzerfall
+                    if learnrate_decay is not None: # Wenn eine Lernratenanpassungsfunktion angegeben ist
+                        learnrate = learnrate_decay(iterationen, **kwargs) # Ruft die Funktion learnrate_decay auf, um die Lernrate anzupassen
+
+                    num_batches += 1 # Erhöht die Anzahl der Minibatches um 1
+                    iterationen += 1 # Erhöht die Anzahl der Iterationen um 1
+                    
+                    #update progress bar
+                    bar()
+                    
+            kosten_train /= num_batches # Berechnet den Durchschnitt der Trainingskosten für die Epoche
+
+            # Nur zum Drucken (Trainingsgenauigkeit, Validierungskosten und -genauigkeit)
+
+            text  = f&#39;Trainingskosten: {round(kosten_train, 4)} - &#39; # Erstellt einen Text, der die Trainingskosten enthält
+            self.historie[&#39;Training Loss&#39;].append(kosten_train) # Fügt die Trainingskosten zur Historie hinzu
+
+            # Trainingsgenauigkeit
+
+            if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+                genauigkeit_train = np.sum(np.array(y_pred_train) == np.array(y_train)) / len(y_train) # Berechnet die Trainingsgenauigkeit für die Epoche
+                text += f&#39;Trainingsgenauigkeit: {round(genauigkeit_train, 4)}&#39; # Fügt die Trainingsgenauigkeit zum Text hinzu
+                self.historie[&#39;Training Accuracy&#39;].append(genauigkeit_train) # Fügt die Trainingsgenauigkeit zur Historie hinzu
+            else: # Wenn die Kostenfunktion eine andere ist
+                text += f&#39;Trainingsgenauigkeit: {round(kosten_train, 4)}&#39; # Fügt die Trainingskosten als Genauigkeit zum Text hinzu
+                self.historie[&#39;Training Accuracy&#39;].append(kosten_train) # Fügt die Trainingskosten als Genauigkeit zur Historie hinzu
+
+            if X_val is not None: # Wenn Validierungsdaten angegeben sind
+                kosten_val, genauigkeit_val = self.evaluate(X_val, y_val, batch_size) # Ruft die Methode bewerten auf, um die Validierungskosten und -genauigkeit zu berechnen
+                text += f&#39; - Validierungskosten: {round(kosten_val, 4)} - &#39; 
+                self.historie[&#39;Validation Loss&#39;].append(kosten_val) 
+                text += f&#39;Validierungsgenauigkeit: {round(genauigkeit_val, 4)}&#39; 
+                self.historie[&#39;Validation Accuracy&#39;].append(genauigkeit_val) # Fügt die Validierungsgenauigkeit zur Historie hinzu
+
+            if verbose:
+                    print(text)
+            else:
+                print()
+    
+    def evaluate(self, X, y, batch_size=None):
+        &#39;&#39;&#39;
+        Testet das Modell mit den gegebenen Testdaten.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+        X : array-like
+            Die Eingabedaten für den Test, z.B. ein Numpy-Array oder eine Liste von Arrays.
+        y : array-like
+            Die Ausgabedaten für den Test, z.B. ein Numpy-Array oder eine Liste von Arrays.
+        batch_size : int, optional
+            Die Größe der Minibatches, die für den Test verwendet werden sollen. Wenn None, wird die Länge von X verwendet. Der Standardwert ist None.
+
+        Returns
+        -------
+        kosten : float
+            Die Kosten des Modells für die Testdaten, berechnet mit der Kostenfunktion des Modells.
+        genauigkeit : float
+            Die Genauigkeit des Modells für die Testdaten, berechnet als der Anteil der korrekten Vorhersagen.
+        &#39;&#39;&#39;
+        if batch_size is None: # Wenn keine Batch-Größe angegeben ist
+            batch_size = len(X) # Verwendet die Länge von X als Batch-Größe
+
+        kosten = 0 # Initialisiert die Kosten auf 0
+        richtig = 0 # Initialisiert die Anzahl der richtigen Vorhersagen auf 0
+        num_batches = 0 # Initialisiert die Anzahl der Minibatches auf 0
+        hilfe = Utility() # Erstellt ein Objekt der Klasse Utility
+        Y_1hot, _ = hilfe.onehot(y) # Wandelt die Ausgabedaten in One-Hot-Vektoren um
+
+        for i in range(0, len(X), batch_size): # Iteriert über jede Minibatch
+            X_batch = X[i:i+batch_size] # Extrahiert die Eingabedaten für die Minibatch
+            y_batch = y[i:i+batch_size] # Extrahiert die Ausgabedaten für die Minibatch
+            Y_1hot_batch = Y_1hot[i:i+batch_size] # Extrahiert die One-Hot-Vektoren für die Minibatch
+            Z = X_batch.copy() # Erstellt eine Kopie der Eingabedaten
+            for schicht in self.network_structure: # Iteriert über jede Schicht im Modell
+                if schicht.__class__.__name__==&#39;BatchNorm&#39;: # Wenn die Schicht eine BatchNormalization-Schicht ist
+                    Z = schicht.forward(Z, mode=&#39;test&#39;) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht im Testmodus zu berechnen
+                else: # Wenn die Schicht eine andere Art von Schicht ist
+                    Z = schicht.forward(Z) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht zu berechnen
+            if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+                kosten += self.kosten.get_cost(Z, Y_1hot_batch) / len(y_batch) # Berechnet die Kosten für die Minibatch und addiert sie zu den Gesamtkosten
+                y_pred = np.argmax(Z, axis=1).tolist() # Berechnet die Vorhersagen des Modells für die Minibatch
+                richtig += np.sum(y_pred == y_batch) # Zählt die Anzahl der richtigen Vorhersagen für die Minibatch
+            else: # Wenn die Kostenfunktion eine andere ist
+                kosten += self.kosten.get_cost(Z, y_batch) / len(y_batch) # Berechnet die Kosten für die Minibatch und addiert sie zu den Gesamtkosten
+
+            num_batches += 1 # Erhöht die Anzahl der Minibatches um 1
+
+        if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+            genauigkeit = richtig / len(y) # Berechnet die Genauigkeit des Modells für die Testdaten
+            kosten /= num_batches # Berechnet den Durchschnitt der Kosten für die Testdaten
+            return kosten, genauigkeit # Gibt die Kosten und die Genauigkeit zurück
+        else: # Wenn die Kostenfunktion eine andere ist
+            kosten /= num_batches # Berechnet den Durchschnitt der Kosten für die Testdaten
+            return kosten, kosten # Gibt die Kosten zweimal zurück
+
+    def loss_plot(self):
+        &#39;&#39;&#39;
+        Zeigt einen Plot der Trainings- und Validierungskosten pro Epoche an.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+
+        Returns
+        -------
+        None
+            Die Methode gibt nichts zurück, sondern zeigt den Plot auf dem Bildschirm an.
+        &#39;&#39;&#39;
+        plt.plot(self.historie[&#39;Training Loss&#39;], &#39;k&#39;) # Plottet die Trainingskosten in schwarz
+        if len(self.historie[&#39;Validation Loss&#39;])&gt;0: # Wenn es Validierungskosten gibt
+            plt.plot(self.historie[&#39;Validation Loss&#39;], &#39;r&#39;) # Plottet die Validierungskosten in rot
+            plt.legend([&#39;Training&#39;, &#39;Validierung&#39;], loc=&#39;upper right&#39;) # Fügt eine Legende mit den Namen der Kurven hinzu
+            plt.title(&#39;Modellkosten&#39;) # Fügt einen Titel für den Plot hinzu
+        else: # Wenn es keine Validierungskosten gibt
+            plt.title(&#39;Trainingskosten&#39;) # Fügt einen Titel für den Plot hinzu
+        plt.ylabel(&#39;Kosten&#39;) # Fügt eine Beschriftung für die y-Achse hinzu
+        plt.xlabel(&#39;Epoche&#39;) # Fügt eine Beschriftung für die x-Achse hinzu
+        plt.show() # Zeigt den Plot an
+
+    def accuracy_plot(self):
+        &#39;&#39;&#39;
+        Zeigt einen Plot der Trainings- und Validierungsgenauigkeit pro Epoche an.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+
+        Returns
+        -------
+        None
+            Die Methode gibt nichts zurück, sondern zeigt den Plot auf dem Bildschirm an.
+        &#39;&#39;&#39;
+        plt.plot(self.historie[&#39;Training Accuracy&#39;], &#39;k&#39;) # Plottet die Trainingsgenauigkeit in schwarz
+        if len(self.historie[&#39;Validation Accuracy&#39;])&gt;0: # Wenn es Validierungsgenauigkeit gibt
+            plt.plot(self.historie[&#39;Validation Accuracy&#39;], &#39;r&#39;) # Plottet die Validierungsgenauigkeit in rot
+            plt.legend([&#39;Training&#39;, &#39;Validierung&#39;], loc=&#39;lower right&#39;) # Fügt eine Legende mit den Namen der Kurven hinzu
+            plt.title(&#39;Modellgenauigkeit&#39;) # Fügt einen Titel für den Plot hinzu
+        else: # Wenn es keine Validierungsgenauigkeit gibt
+            plt.title(&#39;Trainingsgenauigkeit&#39;) # Fügt einen Titel für den Plot hinzu
+        plt.ylabel(&#39;Genauigkeit&#39;) # Fügt eine Beschriftung für die y-Achse hinzu
+        plt.xlabel(&#39;Epoche&#39;) # Fügt eine Beschriftung für die x-Achse hinzu
+        plt.show() # Zeigt den Plot an
+
+    def predict(self, X, batch_size=None):
+        &#39;&#39;&#39;
+        Erzeugt Vorhersagen des Modells für die gegebenen Eingabedaten.
+
+        Parameters
+        ----------
+        self : object
+            Eine Instanz der Klasse CNN.
+        X : array-like
+            Die Eingabedaten, für die das Modell Vorhersagen machen soll, z.B. ein Numpy-Array oder eine Liste von Arrays.
+        batch_size : int, optional
+            Die Größe der Minibatches, die für die Vorhersage verwendet werden sollen. Wenn None, wird die Länge von X verwendet. Der Standardwert ist None.
+
+        Returns
+        -------
+        y_pred : array-like
+            Die Vorhersagen des Modells für die Eingabedaten, z.B. ein Numpy-Array oder eine Liste von Arrays.
+        &#39;&#39;&#39;
+        if batch_size is None: # Wenn keine Batch-Größe angegeben ist
+            if len(X.shape) &lt;3: 
+                batch_size = 1
+                le = 1
+            else: 
+                batch_size = X.shape[0] # Verwendet die Länge von X als Batch-Größe
+                le = X.shape[0]
+        else: le = X.shape[0]
+        for i in range(0, le, batch_size): # Iteriert über jede Minibatch
+            X_batch = X[i:i+batch_size] # Extrahiert die Eingabedaten für die Minibatch
+            Z = X_batch.copy() # Erstellt eine Kopie der Eingabedaten
+            for schicht in self.network_structure: # Iteriert über jede Schicht im Modell
+                if schicht.__class__.__name__==&#39;BatchNorm&#39;: # Wenn die Schicht eine BatchNormalization-Schicht ist
+                    Z = schicht.forward(Z, mode=&#39;test&#39;) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht im Testmodus zu berechnen
+                else: # Wenn die Schicht eine andere Art von Schicht ist
+                    Z = schicht.forward(Z) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht zu berechnen
+            if i==0: # Wenn dies die erste Minibatch ist
+                if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+                    y_pred = np.argmax(Z, axis=1).tolist() # Berechnet die Vorhersagen des Modells für die Minibatch als eine Liste von Indizes
+                else: # Wenn die Kostenfunktion eine andere ist
+                    y_pred = Z # Speichert die Ausgabe des Modells für die Minibatch als ein Array
+            else: # Wenn dies nicht die erste Minibatch ist
+                if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+                    y_pred += np.argmax(Z, axis=1).tolist() # Fügt die Vorhersagen des Modells für die Minibatch zur Liste der Vorhersagen hinzu
+                else: # Wenn die Kostenfunktion eine andere ist
+                    y_pred = np.vstack((y_pred, Z)) # Stapelt die Ausgabe des Modells für die Minibatch unter der bisherigen Ausgabe
+
+        return np.array(y_pred) # Gibt die Vorhersagen des Modells für die Eingabedaten als ein Array zurück
+
+    #Sichere alle Parameter als pkl Datei
+    def save(self, fileName, saveJustParam = False):
+        &#39;&#39;&#39;
+        Speichert die Parameter des Netzes als eine pkl-Datei.
+
+        Diese Methode liest die Parameter der einzelnen Schichten aus und speichert sie mit den Schichten in einer Liste, die mit pickle in einer Datei gespeichert wird. Wenn saveJustParam auf True gesetzt ist, werden nur die Gewichte und Bias-Werte von Dense und Conv2D-Schichten gespeichert.
+
+        Parameters
+        ----------
+        fileName : str
+            Der Name der Datei, in der die Parameter gespeichert werden sollen.
+        saveJustParam : bool, optional
+            Ob nur die Gewichte und Bias-Werte gespeichert werden sollen. Standardmäßig auf False gesetzt.
+
+        Returns
+        -------
+        None
+
+        Raises
+        ------
+        ValueError
+            Wenn eine Schicht einen unbekannten oder nicht unterstützten Typ hat.
+        &#39;&#39;&#39;
+        #Ließ die Parameter der einzelnen Schichten aus und speichere sie mit den Schichten in struc
+        if not saveJustParam: 
+            struc = [self.input_shape, ] #Struktur des Netzes mit Schichtklasse und Parameter
+            for layer in self.network_structure:
+                schicht = [] #Schichtklasse und Parameter
+                if isinstance(layer, Conv2D): 
+                    schicht.append(&#34;Conv2D&#34;)
+                    param = (layer.Kernel, layer.kernel_size, layer.stride, layer.padding_type,
+             layer.activation_type, layer.use_bias, layer.weight_initializer_type,
+             layer.kernel_regularizer, layer.seed, layer.input_shape, layer.bias)
+                    schicht.append(param)
+                elif isinstance(layer, Pooling2D):
+                    schicht.append(&#34;Pooling2D&#34;)
+                    param = (layer.kernelSize, layer.stride, layer.padding_type, layer.pool_type)
+                    schicht.append(param)
+                elif isinstance(layer, Dense):
+                    schicht.append(&#34;Dense&#34;)
+                    param = (layer.neurons, layer.activation_type, layer.use_bias,
+                 layer.weight_initializer_type, layer.weight_regularizer, layer.seed, layer.input_dim, layer.weight, layer.bias)
+                    schicht.append(param)
+                elif isinstance(layer, Flatten):
+                    schicht.append(&#34;Flatten&#34;)
+                    param = ()
+                    schicht.append(param)
+                elif isinstance(layer, Dropout):
+                    schicht.append(&#34;Dropout&#34;)
+                    param = (layer.p)
+                    schicht.append(param)
+                else: raise ValueError(&#34;Der folgende Schichtyp: &#34;, type(layer), &#34; ist unbekannt oder wird nicht unterstützt&#34;)
+                struc.append(schicht)
+        else:# Speichere nur die Gewichte und Bias Werte von Dens und Conv2D
+            struc = []
+            for layer in self.network_structure:
+                schicht = []
+                if isinstance(layer, Conv2D):
+                    schicht.append(&#34;Conv2D&#34;)
+                    param = (layer.Kernel, layer.bias)
+                    schicht.append(param)
+                elif isinstance(layer, Dense):
+                    schicht.append(&#34;Dense&#34;)
+                    param = (layer.weight, layer.bias)
+                    schicht.append(param)
+                else: schicht = None
+                struc.append(schicht)
+        print(&#34;Parameter des Netzes geladen&#34;)
+         
+        #Speicher die struc Liste mit pickle in fileName
+        with open(fileName, &#34;wb&#34;) as datei:
+            pickle.dump(struc, datei)
+        print(&#34;Parameter Abgespeichert&#34;)
+    
+    def load(self, fileName, loadStruc = True):
+        
+        &#34;&#34;&#34;
+        Lädt die Parameter des Netzes aus einer pkl-Datei.
+
+        Diese Methode lädt eine Liste mit den Schichten und ihren Parametern aus einer Datei, die mit pickle gespeichert wurde. Wenn loadStruc auf True gesetzt ist, werden alle Schichten und ihre Parameter geladen. Wenn loadStruc auf False gesetzt ist, werden nur die Gewichte und Bias-Werte von Dense und Conv2D-Schichten geladen. Die geladenen Schichten werden dem Netz hinzugefügt.
+
+        Parameters
+        ----------
+        fileName : str
+            Der Name der Datei, aus der die Parameter geladen werden sollen.
+        loadStruc : bool, optional
+            Ob alle Schichten und ihre Parameter oder nur die Gewichte und Bias-Werte geladen werden sollen. Standardmäßig auf True gesetzt.
+
+        Returns
+        -------
+        None
+
+        Raises
+        ------
+        ValueError
+            Wenn eine Schicht einen unbekannten oder nicht unterstützten Typ hat.
+        &#34;&#34;&#34;
+        
+        #load the struc list with pickle
+        with open(fileName, &#34;rb&#34;) as datei:
+            struc = pickle.load(datei)
+        print(&#34;Parameter geladen&#34;)
+        
+        input_shape = struc[0]
+        self.add(self.Input(input_shape=input_shape))
+        #für jede Schicht in struc erstelle den Layer und füge ihn zum Netz hinzu
+        for layer in struc[1:]:
+            if layer[0] == &#34;Conv2D&#34;:
+                self.add(Conv2D(*layer[1]))
+            elif layer[0] == &#34;Pooling2D&#34;:
+                self.add( Pooling2D(*layer[1]))
+            elif layer[0] == &#34;Dense&#34;:
+                self.add( Dense(*layer[1]))
+            elif layer[0] == &#34;Flatten&#34;:
+                self.add(Flatten())
+            elif layer[0] == &#34;Dropout&#34;:
+                self.add(Dropout(layer[1]))     
+            else: raise ValueError(&#34;Der folgende Schichtyp: &#34;, layer[0], &#34; ist unbekannt oder wird nicht unterstützt&#34;)
+        print(&#34;Netz mit Prametern erstellt&#34;)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="Neural.Network.Network.Input"><code class="name flex">
+<span>def <span class="ident">Input</span></span>(<span>self, input_shape)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Definiert die Eingabeform des Modells.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>input_shape</code></strong> :&ensp;<code>tuple</code></dt>
+<dd>Ein Tupel, das die Form der Eingabedaten angibt, z.B. (3, 32, 32) für RGB-Bilder mit 32x32 Pixeln.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def Input(self, input_shape):
+    &#39;&#39;&#39;
+    Definiert die Eingabeform des Modells.
+
+    Parameters
+    ----------
+    input_shape : tuple
+        Ein Tupel, das die Form der Eingabedaten angibt, z.B. (3, 32, 32) für RGB-Bilder mit 32x32 Pixeln.
+    &#39;&#39;&#39;
+    self.input_shape = input_shape # Die Dimension der Eingabe
+    self.layer_out_shape = [self.input_shape] # Eine Liste, die die Ausgabeform jeder Schicht speichert
+    self.schicht_name = [&#34;Input&#34;] # Eine Liste, die die Namen jeder Schicht speichert</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.Network.accuracy_plot"><code class="name flex">
+<span>def <span class="ident">accuracy_plot</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Zeigt einen Plot der Trainings- und Validierungsgenauigkeit pro Epoche an.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>self</code></strong> :&ensp;<code>object</code></dt>
+<dd>Eine Instanz der Klasse CNN.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>Die Methode gibt nichts zurück, sondern zeigt den Plot auf dem Bildschirm an.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def accuracy_plot(self):
+    &#39;&#39;&#39;
+    Zeigt einen Plot der Trainings- und Validierungsgenauigkeit pro Epoche an.
+
+    Parameters
+    ----------
+    self : object
+        Eine Instanz der Klasse CNN.
+
+    Returns
+    -------
+    None
+        Die Methode gibt nichts zurück, sondern zeigt den Plot auf dem Bildschirm an.
+    &#39;&#39;&#39;
+    plt.plot(self.historie[&#39;Training Accuracy&#39;], &#39;k&#39;) # Plottet die Trainingsgenauigkeit in schwarz
+    if len(self.historie[&#39;Validation Accuracy&#39;])&gt;0: # Wenn es Validierungsgenauigkeit gibt
+        plt.plot(self.historie[&#39;Validation Accuracy&#39;], &#39;r&#39;) # Plottet die Validierungsgenauigkeit in rot
+        plt.legend([&#39;Training&#39;, &#39;Validierung&#39;], loc=&#39;lower right&#39;) # Fügt eine Legende mit den Namen der Kurven hinzu
+        plt.title(&#39;Modellgenauigkeit&#39;) # Fügt einen Titel für den Plot hinzu
+    else: # Wenn es keine Validierungsgenauigkeit gibt
+        plt.title(&#39;Trainingsgenauigkeit&#39;) # Fügt einen Titel für den Plot hinzu
+    plt.ylabel(&#39;Genauigkeit&#39;) # Fügt eine Beschriftung für die y-Achse hinzu
+    plt.xlabel(&#39;Epoche&#39;) # Fügt eine Beschriftung für die x-Achse hinzu
+    plt.show() # Zeigt den Plot an</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.Network.add"><code class="name flex">
+<span>def <span class="ident">add</span></span>(<span>self, schicht)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fügt eine Schicht zum Modell hinzu.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>schicht</code></strong> :&ensp;<code>object</code></dt>
+<dd>Ein Objekt, das eine Schicht repräsentiert, z.B. Conv2D, Dense, etc.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add(self, schicht):
+    &#39;&#39;&#39;
+    Fügt eine Schicht zum Modell hinzu.
+
+    Parameters
+    ----------
+    schicht : object
+        Ein Objekt, das eine Schicht repräsentiert, z.B. Conv2D, Dense, etc.
+    &#39;&#39;&#39;
+    # Fügt die Schicht zur Liste der Schichten hinzu
+    self.network_structure.append(schicht)</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.Network.compile"><code class="name flex">
+<span>def <span class="ident">compile</span></span>(<span>self, kosten_typ, optimierer_typ)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fertigt das Modell mit einer Kostenfunktion und einem Optimierer an.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>self</code></strong> :&ensp;<code>object</code></dt>
+<dd>Eine Instanz der Klasse CNN.</dd>
+<dt><strong><code>kosten_typ</code></strong> :&ensp;<code>str</code></dt>
+<dd>Der Name der Kostenfunktion, die für das Modell verwendet werden soll, z.B. "cross-entropy" oder "mse".</dd>
+<dt><strong><code>optimierer_typ</code></strong> :&ensp;<code>str</code></dt>
+<dd>Der Name des Optimierers, der für das Modell verwendet werden soll, z.B. "sgd" oder "adam".</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>Die Methode gibt nichts zurück, sondern setzt die Attribute kosten, kosten_typ und optimierer_typ der Instanz.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def compile(self, kosten_typ, optimierer_typ):
+    &#39;&#39;&#39;
+    Fertigt das Modell mit einer Kostenfunktion und einem Optimierer an.
+
+    Parameters
+    ----------
+    self : object
+        Eine Instanz der Klasse CNN.
+    kosten_typ : str
+        Der Name der Kostenfunktion, die für das Modell verwendet werden soll, z.B. &#34;cross-entropy&#34; oder &#34;mse&#34;.
+    optimierer_typ : str
+        Der Name des Optimierers, der für das Modell verwendet werden soll, z.B. &#34;sgd&#34; oder &#34;adam&#34;.
+
+    Returns
+    -------
+    None
+        Die Methode gibt nichts zurück, sondern setzt die Attribute kosten, kosten_typ und optimierer_typ der Instanz.
+    &#39;&#39;&#39;
+    self.kosten = Cost(kosten_typ) # Erstellt ein Objekt der Klasse Cost mit der angegebenen Kostenfunktion
+    self.kosten_typ = kosten_typ # Speichert den Namen der Kostenfunktion als Attribut
+    self.optimierer_typ = optimierer_typ # Speichert den Namen des Optimierers als Attribut</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.Network.evaluate"><code class="name flex">
+<span>def <span class="ident">evaluate</span></span>(<span>self, X, y, batch_size=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Testet das Modell mit den gegebenen Testdaten.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>self</code></strong> :&ensp;<code>object</code></dt>
+<dd>Eine Instanz der Klasse CNN.</dd>
+<dt><strong><code>X</code></strong> :&ensp;<code>array-like</code></dt>
+<dd>Die Eingabedaten für den Test, z.B. ein Numpy-Array oder eine Liste von Arrays.</dd>
+<dt><strong><code>y</code></strong> :&ensp;<code>array-like</code></dt>
+<dd>Die Ausgabedaten für den Test, z.B. ein Numpy-Array oder eine Liste von Arrays.</dd>
+<dt><strong><code>batch_size</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Die Größe der Minibatches, die für den Test verwendet werden sollen. Wenn None, wird die Länge von X verwendet. Der Standardwert ist None.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>kosten</code></strong> :&ensp;<code>float</code></dt>
+<dd>Die Kosten des Modells für die Testdaten, berechnet mit der Kostenfunktion des Modells.</dd>
+<dt><strong><code>genauigkeit</code></strong> :&ensp;<code>float</code></dt>
+<dd>Die Genauigkeit des Modells für die Testdaten, berechnet als der Anteil der korrekten Vorhersagen.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def evaluate(self, X, y, batch_size=None):
+    &#39;&#39;&#39;
+    Testet das Modell mit den gegebenen Testdaten.
+
+    Parameters
+    ----------
+    self : object
+        Eine Instanz der Klasse CNN.
+    X : array-like
+        Die Eingabedaten für den Test, z.B. ein Numpy-Array oder eine Liste von Arrays.
+    y : array-like
+        Die Ausgabedaten für den Test, z.B. ein Numpy-Array oder eine Liste von Arrays.
+    batch_size : int, optional
+        Die Größe der Minibatches, die für den Test verwendet werden sollen. Wenn None, wird die Länge von X verwendet. Der Standardwert ist None.
+
+    Returns
+    -------
+    kosten : float
+        Die Kosten des Modells für die Testdaten, berechnet mit der Kostenfunktion des Modells.
+    genauigkeit : float
+        Die Genauigkeit des Modells für die Testdaten, berechnet als der Anteil der korrekten Vorhersagen.
+    &#39;&#39;&#39;
+    if batch_size is None: # Wenn keine Batch-Größe angegeben ist
+        batch_size = len(X) # Verwendet die Länge von X als Batch-Größe
+
+    kosten = 0 # Initialisiert die Kosten auf 0
+    richtig = 0 # Initialisiert die Anzahl der richtigen Vorhersagen auf 0
+    num_batches = 0 # Initialisiert die Anzahl der Minibatches auf 0
+    hilfe = Utility() # Erstellt ein Objekt der Klasse Utility
+    Y_1hot, _ = hilfe.onehot(y) # Wandelt die Ausgabedaten in One-Hot-Vektoren um
+
+    for i in range(0, len(X), batch_size): # Iteriert über jede Minibatch
+        X_batch = X[i:i+batch_size] # Extrahiert die Eingabedaten für die Minibatch
+        y_batch = y[i:i+batch_size] # Extrahiert die Ausgabedaten für die Minibatch
+        Y_1hot_batch = Y_1hot[i:i+batch_size] # Extrahiert die One-Hot-Vektoren für die Minibatch
+        Z = X_batch.copy() # Erstellt eine Kopie der Eingabedaten
+        for schicht in self.network_structure: # Iteriert über jede Schicht im Modell
+            if schicht.__class__.__name__==&#39;BatchNorm&#39;: # Wenn die Schicht eine BatchNormalization-Schicht ist
+                Z = schicht.forward(Z, mode=&#39;test&#39;) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht im Testmodus zu berechnen
+            else: # Wenn die Schicht eine andere Art von Schicht ist
+                Z = schicht.forward(Z) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht zu berechnen
+        if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+            kosten += self.kosten.get_cost(Z, Y_1hot_batch) / len(y_batch) # Berechnet die Kosten für die Minibatch und addiert sie zu den Gesamtkosten
+            y_pred = np.argmax(Z, axis=1).tolist() # Berechnet die Vorhersagen des Modells für die Minibatch
+            richtig += np.sum(y_pred == y_batch) # Zählt die Anzahl der richtigen Vorhersagen für die Minibatch
+        else: # Wenn die Kostenfunktion eine andere ist
+            kosten += self.kosten.get_cost(Z, y_batch) / len(y_batch) # Berechnet die Kosten für die Minibatch und addiert sie zu den Gesamtkosten
+
+        num_batches += 1 # Erhöht die Anzahl der Minibatches um 1
+
+    if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+        genauigkeit = richtig / len(y) # Berechnet die Genauigkeit des Modells für die Testdaten
+        kosten /= num_batches # Berechnet den Durchschnitt der Kosten für die Testdaten
+        return kosten, genauigkeit # Gibt die Kosten und die Genauigkeit zurück
+    else: # Wenn die Kostenfunktion eine andere ist
+        kosten /= num_batches # Berechnet den Durchschnitt der Kosten für die Testdaten
+        return kosten, kosten # Gibt die Kosten zweimal zurück</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.Network.fit"><code class="name flex">
+<span>def <span class="ident">fit</span></span>(<span>self, X, y, epochs=10, batch_size=5, learnrate=1, X_val=None, y_val=None, verbose=1, learnrate_decay=None, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Trainiert das Modell mit den gegebenen Trainingsdaten und optionalen Validierungsdaten.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>self</code></strong> :&ensp;<code>object</code></dt>
+<dd>Eine Instanz der Klasse CNN.</dd>
+<dt><strong><code>X</code></strong> :&ensp;<code>array-like</code></dt>
+<dd>Die Eingabedaten für das Training, z.B. ein Numpy-Array oder eine Liste von Arrays.</dd>
+<dt><strong><code>y</code></strong> :&ensp;<code>array-like</code></dt>
+<dd>Die Ausgabedaten für das Training, z.B. ein Numpy-Array oder eine Liste von Arrays.</dd>
+<dt><strong><code>epochs</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Die Anzahl der Epochen, die das Modell trainieren soll. Der Standardwert ist 10.</dd>
+<dt><strong><code>batch_size</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Die Größe der Minibatches, die für das Training verwendet werden sollen. Der Standardwert ist 5.</dd>
+<dt><strong><code>learnrate</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Die Lernrate, die für den Optimierer verwendet werden soll. Der Standardwert ist 1.</dd>
+<dt><strong><code>X_val</code></strong> :&ensp;<code>array-like</code>, optional</dt>
+<dd>Die Eingabedaten für die Validierung, z.B. ein Numpy-Array oder eine Liste von Arrays. Wenn None, wird keine Validierung durchgeführt. Der Standardwert ist None.</dd>
+<dt><strong><code>y_val</code></strong> :&ensp;<code>array-like</code>, optional</dt>
+<dd>Die Ausgabedaten für die Validierung, z.B. ein Numpy-Array oder eine Liste von Arrays. Wenn None, wird keine Validierung durchgeführt. Der Standardwert ist None.</dd>
+<dt><strong><code>verbose</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Ein Schalter, der angibt, ob die Trainings- und Validierungsergebnisse nach jeder Epoche gedruckt werden sollen. Wenn 1, werden die Ergebnisse gedruckt. Wenn 0, werden die Ergebnisse nicht gedruckt. Der Standardwert ist 1.</dd>
+<dt><strong><code>learnrate_decay</code></strong> :&ensp;<code>function</code>, optional</dt>
+<dd>Eine Funktion, die die Lernrate nach jeder Iteration anpasst. Wenn None, wird keine Lernratenanpassung durchgeführt. Der Standardwert ist None.</dd>
+<dt><strong><code>**kwargs</code></strong> :&ensp;<code>dict</code>, optional</dt>
+<dd>Zusätzliche Schlüsselwortargumente, die an die Funktion learnrate_decay übergeben werden sollen.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>Die Methode gibt nichts zurück, sondern aktualisiert die Parameter des Modells und speichert die Trainings- und Validierungshistorie als Attribute der Instanz.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fit(self, X, y, epochs=10, batch_size=5, learnrate=1, X_val=None, y_val=None, verbose=1, learnrate_decay=None, **kwargs):
+    &#39;&#39;&#39;
+    Trainiert das Modell mit den gegebenen Trainingsdaten und optionalen Validierungsdaten.
+
+    Parameters
+    ----------
+    self : object
+        Eine Instanz der Klasse CNN.
+    X : array-like
+        Die Eingabedaten für das Training, z.B. ein Numpy-Array oder eine Liste von Arrays.
+    y : array-like
+        Die Ausgabedaten für das Training, z.B. ein Numpy-Array oder eine Liste von Arrays.
+    epochs : int, optional
+        Die Anzahl der Epochen, die das Modell trainieren soll. Der Standardwert ist 10.
+    batch_size : int, optional
+        Die Größe der Minibatches, die für das Training verwendet werden sollen. Der Standardwert ist 5.
+    learnrate : float, optional
+        Die Lernrate, die für den Optimierer verwendet werden soll. Der Standardwert ist 1.
+    X_val : array-like, optional
+        Die Eingabedaten für die Validierung, z.B. ein Numpy-Array oder eine Liste von Arrays. Wenn None, wird keine Validierung durchgeführt. Der Standardwert ist None.
+    y_val : array-like, optional
+        Die Ausgabedaten für die Validierung, z.B. ein Numpy-Array oder eine Liste von Arrays. Wenn None, wird keine Validierung durchgeführt. Der Standardwert ist None.
+    verbose : int, optional
+        Ein Schalter, der angibt, ob die Trainings- und Validierungsergebnisse nach jeder Epoche gedruckt werden sollen. Wenn 1, werden die Ergebnisse gedruckt. Wenn 0, werden die Ergebnisse nicht gedruckt. Der Standardwert ist 1.
+    learnrate_decay : function, optional
+        Eine Funktion, die die Lernrate nach jeder Iteration anpasst. Wenn None, wird keine Lernratenanpassung durchgeführt. Der Standardwert ist None.
+    **kwargs : dict, optional
+        Zusätzliche Schlüsselwortargumente, die an die Funktion learnrate_decay übergeben werden sollen.
+
+    Returns
+    -------
+    None
+        Die Methode gibt nichts zurück, sondern aktualisiert die Parameter des Modells und speichert die Trainings- und Validierungshistorie als Attribute der Instanz.
+    &#39;&#39;&#39;
+    self.historie = {&#39;Training Loss&#39;: [],&#39;Validation Loss&#39;: [], &#39;Training Accuracy&#39;: [],  &#39;Validation Accuracy&#39;: []} # Erstellt ein Wörterbuch, das die Trainings- und Validierungshistorie speichert
+    iterationen = 0 # Initialisiert die Anzahl der Iterationen auf 0
+    self.batch = batch_size # Speichert die Größe der Minibatches als Attribut
+    self.init_params() # Ruft die Methode init_params auf, um die Parameter des Modells zu initiieren
+    gesamt_num_batches = np.ceil(len(X)/batch_size) # Berechnet die Gesamtzahl der Minibatches
+
+    for epoch in range(epochs): # Iteriert über jede Epoche
+        kosten_train = 0 # Initialisiert die Trainingskosten auf 0
+        num_batches = 0 # Initialisiert die Anzahl der Minibatches auf 0
+        y_pred_train = [] # Initialisiert eine Liste, die die Vorhersagen des Modells für die Trainingsdaten speichert
+        y_train = [] # Initialisiert eine Liste, die die tatsächlichen Ausgaben für die Trainingsdaten speichert
+
+        print(f&#39;\nEpoch: {epoch+1}/{epochs}&#39;) # Druckt die aktuelle Epoche
+        with alive_bar(len(range(0, len(X), batch_size))) as bar:
+            for i in range(0, len(X), batch_size): # Iteriert über jede Minibatch
+                X_batch = X[i:i+batch_size] # Extrahiert die Eingabedaten für die Minibatch
+                y_batch = y[i:i+batch_size] # Extrahiert die Ausgabedaten für die Minibatch
+
+                Z = X_batch.copy() # Erstellt eine Kopie der Eingabedaten
+
+                # feed-forward
+                for schicht in self.network_structure: # Iteriert über jede Schicht im Modell
+                    Z = schicht.forward(Z) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht zu berechnen
+                
+                # Trainingsgenauigkeit berechnen
+                if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+                    y_pred_train += np.argmax(Z, axis=1).tolist() # Fügt die Vorhersagen des Modells für die Minibatch zur Liste der Vorhersagen hinzu
+                    y_train += np.argmax(y_batch, axis=1).tolist() # Fügt die tatsächlichen Ausgaben für die Minibatch zur Liste der Ausgaben hinzu
+
+                # Kosten berechnen
+                kosten_train += self.kosten.get_cost(Z, y_batch) / self.batch # Berechnet die Kosten für die Minibatch und addiert sie zu den Trainingskosten
+
+                # dL/daL berechnen (letzter Schicht Rückpropagationsfehler)
+                dZ = self.kosten.get_d_cost(Z, y_batch) # Berechnet den Fehler der letzten Schicht
+                # Rückpropagation
+                for schicht in self.network_structure[::-1]: # Iteriert über jede Schicht im Modell in umgekehrter Reihenfolge
+                    dZ = schicht.backpropagation(dZ) # Ruft die Methode rückpropagation der Schicht auf, um den Fehler an die vorherige Schicht weiterzugeben
+
+                # Parameter aktualisieren
+                for schicht in self.network_structure: # Iteriert über jede Schicht im Modell
+                    if isinstance(schicht, (Dense, BatchNorm, Conv2D)): # Wenn die Schicht eine Dense-, BatchNormalization- oder Conv2D-Schicht ist
+                        schicht.update(learnrate, self.batch, iterationen) # Ruft die Methode aktualisieren der Schicht auf, um die Parameter der Schicht zu aktualisieren
+
+                # Lernratenzerfall
+                if learnrate_decay is not None: # Wenn eine Lernratenanpassungsfunktion angegeben ist
+                    learnrate = learnrate_decay(iterationen, **kwargs) # Ruft die Funktion learnrate_decay auf, um die Lernrate anzupassen
+
+                num_batches += 1 # Erhöht die Anzahl der Minibatches um 1
+                iterationen += 1 # Erhöht die Anzahl der Iterationen um 1
+                
+                #update progress bar
+                bar()
+                
+        kosten_train /= num_batches # Berechnet den Durchschnitt der Trainingskosten für die Epoche
+
+        # Nur zum Drucken (Trainingsgenauigkeit, Validierungskosten und -genauigkeit)
+
+        text  = f&#39;Trainingskosten: {round(kosten_train, 4)} - &#39; # Erstellt einen Text, der die Trainingskosten enthält
+        self.historie[&#39;Training Loss&#39;].append(kosten_train) # Fügt die Trainingskosten zur Historie hinzu
+
+        # Trainingsgenauigkeit
+
+        if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+            genauigkeit_train = np.sum(np.array(y_pred_train) == np.array(y_train)) / len(y_train) # Berechnet die Trainingsgenauigkeit für die Epoche
+            text += f&#39;Trainingsgenauigkeit: {round(genauigkeit_train, 4)}&#39; # Fügt die Trainingsgenauigkeit zum Text hinzu
+            self.historie[&#39;Training Accuracy&#39;].append(genauigkeit_train) # Fügt die Trainingsgenauigkeit zur Historie hinzu
+        else: # Wenn die Kostenfunktion eine andere ist
+            text += f&#39;Trainingsgenauigkeit: {round(kosten_train, 4)}&#39; # Fügt die Trainingskosten als Genauigkeit zum Text hinzu
+            self.historie[&#39;Training Accuracy&#39;].append(kosten_train) # Fügt die Trainingskosten als Genauigkeit zur Historie hinzu
+
+        if X_val is not None: # Wenn Validierungsdaten angegeben sind
+            kosten_val, genauigkeit_val = self.evaluate(X_val, y_val, batch_size) # Ruft die Methode bewerten auf, um die Validierungskosten und -genauigkeit zu berechnen
+            text += f&#39; - Validierungskosten: {round(kosten_val, 4)} - &#39; 
+            self.historie[&#39;Validation Loss&#39;].append(kosten_val) 
+            text += f&#39;Validierungsgenauigkeit: {round(genauigkeit_val, 4)}&#39; 
+            self.historie[&#39;Validation Accuracy&#39;].append(genauigkeit_val) # Fügt die Validierungsgenauigkeit zur Historie hinzu
+
+        if verbose:
+                print(text)
+        else:
+            print()</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.Network.init_params"><code class="name flex">
+<span>def <span class="ident">init_params</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Initiiert die Parameter des Modells basierend auf den hinzugefügten Schichten.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>self</code></strong> :&ensp;<code>object</code></dt>
+<dd>Eine Instanz der Klasse CNN.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>Die Methode gibt nichts zurück, sondern setzt die Parameter der Schichten als Attribute der Instanz.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def init_params(self):
+    &#39;&#39;&#39;
+    Initiiert die Parameter des Modells basierend auf den hinzugefügten Schichten.
+
+    Parameters
+    ----------
+    self : object
+        Eine Instanz der Klasse CNN.
+
+    Returns
+    -------
+    None
+        Die Methode gibt nichts zurück, sondern setzt die Parameter der Schichten als Attribute der Instanz.
+    &#39;&#39;&#39;
+    if not self.architecture_called: # Wenn die Architektur des Modells noch nicht berechnet wurde
+        self.network_architecture() # Ruft die Methode network_architecture auf, um die Architektur zu berechnen
+        self.architecture_called = True # Setzt das Attribut architecture_called auf True
+    for i, schicht in enumerate(self.network_structure): # Iteriert über jede Schicht in der Liste der Schichten
+        if isinstance(schicht, (Dense, Conv2D)): # Wenn die Schicht eine Dense- oder Conv2D-Schicht ist
+            #print(&#34;Schicht: &#34;, schicht.__class__.__name__, &#34; input: &#34;, self.architektur[i])
+            schicht.initialize_parameters(self.layer_out_shape[i], self.optimierer_typ) # Ruft die Methode init_params der Schicht auf, um die Parameter zu initiieren
+        elif isinstance(schicht, BatchNorm): # Wenn die Schicht eine BatchNormalization-Schicht ist
+            schicht.initialize_parameters(self.layer_out_shape[i]) # Ruft die Methode init_params der Schicht auf, um die Parameter zu initiieren</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.Network.load"><code class="name flex">
+<span>def <span class="ident">load</span></span>(<span>self, fileName, loadStruc=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Lädt die Parameter des Netzes aus einer pkl-Datei.</p>
+<p>Diese Methode lädt eine Liste mit den Schichten und ihren Parametern aus einer Datei, die mit pickle gespeichert wurde. Wenn loadStruc auf True gesetzt ist, werden alle Schichten und ihre Parameter geladen. Wenn loadStruc auf False gesetzt ist, werden nur die Gewichte und Bias-Werte von Dense und Conv2D-Schichten geladen. Die geladenen Schichten werden dem Netz hinzugefügt.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>fileName</code></strong> :&ensp;<code>str</code></dt>
+<dd>Der Name der Datei, aus der die Parameter geladen werden sollen.</dd>
+<dt><strong><code>loadStruc</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Ob alle Schichten und ihre Parameter oder nur die Gewichte und Bias-Werte geladen werden sollen. Standardmäßig auf True gesetzt.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>&nbsp;</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>ValueError</code></dt>
+<dd>Wenn eine Schicht einen unbekannten oder nicht unterstützten Typ hat.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load(self, fileName, loadStruc = True):
+    
+    &#34;&#34;&#34;
+    Lädt die Parameter des Netzes aus einer pkl-Datei.
+
+    Diese Methode lädt eine Liste mit den Schichten und ihren Parametern aus einer Datei, die mit pickle gespeichert wurde. Wenn loadStruc auf True gesetzt ist, werden alle Schichten und ihre Parameter geladen. Wenn loadStruc auf False gesetzt ist, werden nur die Gewichte und Bias-Werte von Dense und Conv2D-Schichten geladen. Die geladenen Schichten werden dem Netz hinzugefügt.
+
+    Parameters
+    ----------
+    fileName : str
+        Der Name der Datei, aus der die Parameter geladen werden sollen.
+    loadStruc : bool, optional
+        Ob alle Schichten und ihre Parameter oder nur die Gewichte und Bias-Werte geladen werden sollen. Standardmäßig auf True gesetzt.
+
+    Returns
+    -------
+    None
+
+    Raises
+    ------
+    ValueError
+        Wenn eine Schicht einen unbekannten oder nicht unterstützten Typ hat.
+    &#34;&#34;&#34;
+    
+    #load the struc list with pickle
+    with open(fileName, &#34;rb&#34;) as datei:
+        struc = pickle.load(datei)
+    print(&#34;Parameter geladen&#34;)
+    
+    input_shape = struc[0]
+    self.add(self.Input(input_shape=input_shape))
+    #für jede Schicht in struc erstelle den Layer und füge ihn zum Netz hinzu
+    for layer in struc[1:]:
+        if layer[0] == &#34;Conv2D&#34;:
+            self.add(Conv2D(*layer[1]))
+        elif layer[0] == &#34;Pooling2D&#34;:
+            self.add( Pooling2D(*layer[1]))
+        elif layer[0] == &#34;Dense&#34;:
+            self.add( Dense(*layer[1]))
+        elif layer[0] == &#34;Flatten&#34;:
+            self.add(Flatten())
+        elif layer[0] == &#34;Dropout&#34;:
+            self.add(Dropout(layer[1]))     
+        else: raise ValueError(&#34;Der folgende Schichtyp: &#34;, layer[0], &#34; ist unbekannt oder wird nicht unterstützt&#34;)
+    print(&#34;Netz mit Prametern erstellt&#34;)</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.Network.loss_plot"><code class="name flex">
+<span>def <span class="ident">loss_plot</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Zeigt einen Plot der Trainings- und Validierungskosten pro Epoche an.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>self</code></strong> :&ensp;<code>object</code></dt>
+<dd>Eine Instanz der Klasse CNN.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>Die Methode gibt nichts zurück, sondern zeigt den Plot auf dem Bildschirm an.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def loss_plot(self):
+    &#39;&#39;&#39;
+    Zeigt einen Plot der Trainings- und Validierungskosten pro Epoche an.
+
+    Parameters
+    ----------
+    self : object
+        Eine Instanz der Klasse CNN.
+
+    Returns
+    -------
+    None
+        Die Methode gibt nichts zurück, sondern zeigt den Plot auf dem Bildschirm an.
+    &#39;&#39;&#39;
+    plt.plot(self.historie[&#39;Training Loss&#39;], &#39;k&#39;) # Plottet die Trainingskosten in schwarz
+    if len(self.historie[&#39;Validation Loss&#39;])&gt;0: # Wenn es Validierungskosten gibt
+        plt.plot(self.historie[&#39;Validation Loss&#39;], &#39;r&#39;) # Plottet die Validierungskosten in rot
+        plt.legend([&#39;Training&#39;, &#39;Validierung&#39;], loc=&#39;upper right&#39;) # Fügt eine Legende mit den Namen der Kurven hinzu
+        plt.title(&#39;Modellkosten&#39;) # Fügt einen Titel für den Plot hinzu
+    else: # Wenn es keine Validierungskosten gibt
+        plt.title(&#39;Trainingskosten&#39;) # Fügt einen Titel für den Plot hinzu
+    plt.ylabel(&#39;Kosten&#39;) # Fügt eine Beschriftung für die y-Achse hinzu
+    plt.xlabel(&#39;Epoche&#39;) # Fügt eine Beschriftung für die x-Achse hinzu
+    plt.show() # Zeigt den Plot an</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.Network.network_architecture"><code class="name flex">
+<span>def <span class="ident">network_architecture</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Berechnet die Architektur des Modells basierend auf den hinzugefügten Schichten.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def network_architecture(self):
+    &#39;&#39;&#39;
+    Berechnet die Architektur des Modells basierend auf den hinzugefügten Schichten.
+    &#39;&#39;&#39;
+    for schicht in self.network_structure: # Iteriert über jede Schicht in der Liste
+        if isinstance(schicht, Conv2D): # Wenn die Schicht eine Conv2D-Schicht ist
+            if schicht.input_shape_x is not None: # Wenn die Schicht eine Eingabeform definiert hat
+                self.Input(schicht.input_shape_x) # Ruft die Input-Methode mit dieser Form auf
+            schicht.get_dimensions(self.layer_out_shape[-1]) # Berechnet die Ausgabeform der Schicht basierend auf der vorherigen Schicht
+            self.layer_out_shape.append(schicht.output_shape) # Fügt die Ausgabeform zur Architekturliste hinzu
+            self.schicht_name.append(schicht.__class__.__name__) # Fügt den Namen der Schicht zur Namensliste hinzu
+        elif isinstance(schicht, (Flatten, Pooling2D)): # Wenn die Schicht eine Flatten- oder Pooling2D-Schicht ist
+            schicht.get_dimensions(self.layer_out_shape[-1]) # Berechnet die Ausgabeform der Schicht basierend auf der vorherigen Schicht
+            self.layer_out_shape.append(schicht.output_shape) # Fügt die Ausgabeform zur Architekturliste hinzu
+            self.schicht_name.append(schicht.__class__.__name__) # Fügt den Namen der Schicht zur Namensliste hinzu
+        elif isinstance(schicht, Dense): # Wenn die Schicht eine Dense-Schicht ist
+            self.layer_out_shape.append(schicht.neurons) # Fügt die Anzahl der Neuronen zur Architekturliste hinzu
+            self.schicht_name.append(schicht.__class__.__name__) # Fügt den Namen der Schicht zur Namensliste hinzu
+        else: # Wenn die Schicht eine andere Art von Schicht ist
+            self.layer_out_shape.append(self.layer_out_shape[-1]) # Fügt die gleiche Ausgabeform wie die vorherige Schicht zur Architekturliste hinzu
+            self.schicht_name.append(schicht.__class__.__name__) # Fügt den Namen der Schicht zur Namensliste hinzu
+
+    self.network_structure = list(filter(None, self.network_structure)) # Entfernt alle None-Elemente aus der Schichtenliste
+    try:
+        idx = self.schicht_name.index(&#34;NoneType&#34;) # Sucht nach dem Index eines NoneType-Elements in der Namensliste
+        del self.schicht_name[idx] # Löscht das Element an diesem Index aus der Namensliste
+        del self.layer_out_shape[idx] # Löscht das Element an diesem Index aus der Architekturliste
+    except:
+        pass</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.Network.predict"><code class="name flex">
+<span>def <span class="ident">predict</span></span>(<span>self, X, batch_size=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Erzeugt Vorhersagen des Modells für die gegebenen Eingabedaten.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>self</code></strong> :&ensp;<code>object</code></dt>
+<dd>Eine Instanz der Klasse CNN.</dd>
+<dt><strong><code>X</code></strong> :&ensp;<code>array-like</code></dt>
+<dd>Die Eingabedaten, für die das Modell Vorhersagen machen soll, z.B. ein Numpy-Array oder eine Liste von Arrays.</dd>
+<dt><strong><code>batch_size</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Die Größe der Minibatches, die für die Vorhersage verwendet werden sollen. Wenn None, wird die Länge von X verwendet. Der Standardwert ist None.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>y_pred</code></strong> :&ensp;<code>array-like</code></dt>
+<dd>Die Vorhersagen des Modells für die Eingabedaten, z.B. ein Numpy-Array oder eine Liste von Arrays.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def predict(self, X, batch_size=None):
+    &#39;&#39;&#39;
+    Erzeugt Vorhersagen des Modells für die gegebenen Eingabedaten.
+
+    Parameters
+    ----------
+    self : object
+        Eine Instanz der Klasse CNN.
+    X : array-like
+        Die Eingabedaten, für die das Modell Vorhersagen machen soll, z.B. ein Numpy-Array oder eine Liste von Arrays.
+    batch_size : int, optional
+        Die Größe der Minibatches, die für die Vorhersage verwendet werden sollen. Wenn None, wird die Länge von X verwendet. Der Standardwert ist None.
+
+    Returns
+    -------
+    y_pred : array-like
+        Die Vorhersagen des Modells für die Eingabedaten, z.B. ein Numpy-Array oder eine Liste von Arrays.
+    &#39;&#39;&#39;
+    if batch_size is None: # Wenn keine Batch-Größe angegeben ist
+        if len(X.shape) &lt;3: 
+            batch_size = 1
+            le = 1
+        else: 
+            batch_size = X.shape[0] # Verwendet die Länge von X als Batch-Größe
+            le = X.shape[0]
+    else: le = X.shape[0]
+    for i in range(0, le, batch_size): # Iteriert über jede Minibatch
+        X_batch = X[i:i+batch_size] # Extrahiert die Eingabedaten für die Minibatch
+        Z = X_batch.copy() # Erstellt eine Kopie der Eingabedaten
+        for schicht in self.network_structure: # Iteriert über jede Schicht im Modell
+            if schicht.__class__.__name__==&#39;BatchNorm&#39;: # Wenn die Schicht eine BatchNormalization-Schicht ist
+                Z = schicht.forward(Z, mode=&#39;test&#39;) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht im Testmodus zu berechnen
+            else: # Wenn die Schicht eine andere Art von Schicht ist
+                Z = schicht.forward(Z) # Ruft die Methode forward der Schicht auf, um die Ausgabe der Schicht zu berechnen
+        if i==0: # Wenn dies die erste Minibatch ist
+            if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+                y_pred = np.argmax(Z, axis=1).tolist() # Berechnet die Vorhersagen des Modells für die Minibatch als eine Liste von Indizes
+            else: # Wenn die Kostenfunktion eine andere ist
+                y_pred = Z # Speichert die Ausgabe des Modells für die Minibatch als ein Array
+        else: # Wenn dies nicht die erste Minibatch ist
+            if self.kosten_typ==&#39;cross-entropy&#39;: # Wenn die Kostenfunktion die Kreuzentropie ist
+                y_pred += np.argmax(Z, axis=1).tolist() # Fügt die Vorhersagen des Modells für die Minibatch zur Liste der Vorhersagen hinzu
+            else: # Wenn die Kostenfunktion eine andere ist
+                y_pred = np.vstack((y_pred, Z)) # Stapelt die Ausgabe des Modells für die Minibatch unter der bisherigen Ausgabe
+
+    return np.array(y_pred) # Gibt die Vorhersagen des Modells für die Eingabedaten als ein Array zurück</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.Network.save"><code class="name flex">
+<span>def <span class="ident">save</span></span>(<span>self, fileName, saveJustParam=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Speichert die Parameter des Netzes als eine pkl-Datei.</p>
+<p>Diese Methode liest die Parameter der einzelnen Schichten aus und speichert sie mit den Schichten in einer Liste, die mit pickle in einer Datei gespeichert wird. Wenn saveJustParam auf True gesetzt ist, werden nur die Gewichte und Bias-Werte von Dense und Conv2D-Schichten gespeichert.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>fileName</code></strong> :&ensp;<code>str</code></dt>
+<dd>Der Name der Datei, in der die Parameter gespeichert werden sollen.</dd>
+<dt><strong><code>saveJustParam</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Ob nur die Gewichte und Bias-Werte gespeichert werden sollen. Standardmäßig auf False gesetzt.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>&nbsp;</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>ValueError</code></dt>
+<dd>Wenn eine Schicht einen unbekannten oder nicht unterstützten Typ hat.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save(self, fileName, saveJustParam = False):
+    &#39;&#39;&#39;
+    Speichert die Parameter des Netzes als eine pkl-Datei.
+
+    Diese Methode liest die Parameter der einzelnen Schichten aus und speichert sie mit den Schichten in einer Liste, die mit pickle in einer Datei gespeichert wird. Wenn saveJustParam auf True gesetzt ist, werden nur die Gewichte und Bias-Werte von Dense und Conv2D-Schichten gespeichert.
+
+    Parameters
+    ----------
+    fileName : str
+        Der Name der Datei, in der die Parameter gespeichert werden sollen.
+    saveJustParam : bool, optional
+        Ob nur die Gewichte und Bias-Werte gespeichert werden sollen. Standardmäßig auf False gesetzt.
+
+    Returns
+    -------
+    None
+
+    Raises
+    ------
+    ValueError
+        Wenn eine Schicht einen unbekannten oder nicht unterstützten Typ hat.
+    &#39;&#39;&#39;
+    #Ließ die Parameter der einzelnen Schichten aus und speichere sie mit den Schichten in struc
+    if not saveJustParam: 
+        struc = [self.input_shape, ] #Struktur des Netzes mit Schichtklasse und Parameter
+        for layer in self.network_structure:
+            schicht = [] #Schichtklasse und Parameter
+            if isinstance(layer, Conv2D): 
+                schicht.append(&#34;Conv2D&#34;)
+                param = (layer.Kernel, layer.kernel_size, layer.stride, layer.padding_type,
+         layer.activation_type, layer.use_bias, layer.weight_initializer_type,
+         layer.kernel_regularizer, layer.seed, layer.input_shape, layer.bias)
+                schicht.append(param)
+            elif isinstance(layer, Pooling2D):
+                schicht.append(&#34;Pooling2D&#34;)
+                param = (layer.kernelSize, layer.stride, layer.padding_type, layer.pool_type)
+                schicht.append(param)
+            elif isinstance(layer, Dense):
+                schicht.append(&#34;Dense&#34;)
+                param = (layer.neurons, layer.activation_type, layer.use_bias,
+             layer.weight_initializer_type, layer.weight_regularizer, layer.seed, layer.input_dim, layer.weight, layer.bias)
+                schicht.append(param)
+            elif isinstance(layer, Flatten):
+                schicht.append(&#34;Flatten&#34;)
+                param = ()
+                schicht.append(param)
+            elif isinstance(layer, Dropout):
+                schicht.append(&#34;Dropout&#34;)
+                param = (layer.p)
+                schicht.append(param)
+            else: raise ValueError(&#34;Der folgende Schichtyp: &#34;, type(layer), &#34; ist unbekannt oder wird nicht unterstützt&#34;)
+            struc.append(schicht)
+    else:# Speichere nur die Gewichte und Bias Werte von Dens und Conv2D
+        struc = []
+        for layer in self.network_structure:
+            schicht = []
+            if isinstance(layer, Conv2D):
+                schicht.append(&#34;Conv2D&#34;)
+                param = (layer.Kernel, layer.bias)
+                schicht.append(param)
+            elif isinstance(layer, Dense):
+                schicht.append(&#34;Dense&#34;)
+                param = (layer.weight, layer.bias)
+                schicht.append(param)
+            else: schicht = None
+            struc.append(schicht)
+    print(&#34;Parameter des Netzes geladen&#34;)
+     
+    #Speicher die struc Liste mit pickle in fileName
+    with open(fileName, &#34;wb&#34;) as datei:
+        pickle.dump(struc, datei)
+    print(&#34;Parameter Abgespeichert&#34;)</code></pre>
+</details>
+</dd>
+<dt id="Neural.Network.Network.summary"><code class="name flex">
+<span>def <span class="ident">summary</span></span>(<span>self, name='Network')</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def summary(self, name = &#34;Network&#34;):
+       
+    if self.architecture_called==False: # Wenn die Architektur des Modells noch nicht berechnet wurde
+        self.network_architecture() # Ruft die Methode network_architecture auf, um die Architektur zu berechnen
+        self.architecture_called = True # Setzt das Attribut architecture_called auf True
+    len_zugewiesen = [45, 26, 15] # Eine Liste von Längen, die für die Spalten der Zusammenfassung zugewiesen werden
+    anzahl = {&#39;Dense&#39;: 1, &#39;Activation&#39;: 1, &#39;Input&#39;: 1,
+            &#39;BatchNorm&#39;: 1, &#39;Dropout&#39;: 1, &#39;Conv2D&#39;: 1,
+            &#39;Pooling2D&#39;: 1, &#39;Flatten&#39;: 1} # Ein Wörterbuch, das die Anzahl jeder Schichtart speichert
+
+    column = [&#39;Layer (type)&#39;, &#39;Output Shape&#39;, &#39;# of Parameters&#39;] # Eine Liste von Spaltennamen für die Zusammenfassung
+
+    print(&#34;Model: &#34;, name) # Druckt den Namen des Modells
+    print(&#39;-&#39;*sum(len_zugewiesen)) # Druckt eine Trennlinie
+    
+    text = &#39;&#39; # Initialisiert einen leeren Text
+    for i in range(3): # Iteriert über die drei Spalten
+        text += column[i] + &#39; &#39;*(len_zugewiesen[i]-len(column[i])) # Fügt den Spaltennamen und die erforderlichen Leerzeichen zum Text hinzu
+    print(text) # Druckt den Text
+
+    print(&#39;#&#39;*sum(len_zugewiesen)) # Druckt eine Trennlinie
+
+    gesamt_params = 0 # Initialisiert die Gesamtzahl der Parameter auf 0
+    trainierbar_params = 0 # Initialisiert die Anzahl der trainierbaren Parameter auf 0
+    nicht_trainierbar_params = 0 # Initialisiert die Anzahl der nicht trainierbaren Parameter auf 0
+
+    for i in range(len(self.schicht_name)): # Iteriert über jede Schicht in der Namensliste
+        # layer name
+        schicht_name = self.schicht_name[i] # Speichert den Namen der Schicht
+        name = schicht_name.lower() + &#39;_&#39; + str(anzahl[schicht_name]) + &#39; &#39; + &#39;(&#39; + schicht_name + &#39;)&#39; # Erstellt einen eindeutigen Namen für die Schicht mit ihrer Nummer und ihrem Typ
+        anzahl[schicht_name] += 1 # Erhöht die Anzahl dieser Schichtart um 1
+
+        # output shape
+        try: # Versucht, die Ausgabeform der Schicht als Tupel zu erstellen
+            out = &#39;(None, &#39; # Beginnt das Tupel mit None für die Batch-Dimension
+            for n in range(len(self.layer_out_shape[i])-1): # Iteriert über die restlichen Dimensionen außer der letzten
+                out += str(self.layer_out_shape[i][n]) + &#39;, &#39; # Fügt die Dimension und ein Komma zum Tupel hinzu
+            out += str(self.layer_out_shape[i][-1]) + &#39;)&#39;
+        except: # Wenn die Ausgabeform keine Tupel ist
+            out = &#39;(None, &#39; + str(self.layer_out_shape[i]) + &#39;)&#39; 
+
+        # number of params
+        if schicht_name==&#39;Dense&#39;: 
+            h0 = self.layer_out_shape[i-1] 
+            h1 = self.layer_out_shape[i]
+            if self.network_structure[i-1].use_bias: 
+                params = h0*h1 + h1 
+            else: 
+                params = h0*h1 
+            gesamt_params += params 
+            trainierbar_params += params
+        elif schicht_name==&#39;BatchNorm&#39;: # Wenn die Schicht eine BatchNormalization-Schicht ist
+            h = self.layer_out_shape[i] # Speichert die Anzahl der Merkmale
+            params = 4*h # Berechnet die Anzahl der Parameter als das Vierfache der Merkmale
+            trainierbar_params += 2*h # Addiert die Hälfte der Parameter zur Anzahl der trainierbaren Parameter hinzu
+            nicht_trainierbar_params += 2*h # Addiert die Hälfte der Parameter zur Anzahl der nicht trainierbaren Parameter hinzu
+            gesamt_params += params # Addiert die Anzahl der Parameter zur Gesamtzahl hinzu
+        elif schicht_name==&#39;Conv2D&#39;: # Wenn die Schicht eine Conv2D-Schicht ist
+            layer = self.network_structure[i-1] # Speichert die Schicht als ein Objekt
+            if layer.use_bias: # Wenn die Schicht einen Bias-Vektor verwendet
+                add_b = 1 # Speichert eine zusätzliche Einheit für den Bias
+            else: # Wenn die Schicht keinen Bias-Vektor verwendet
+                add_b = 0 # Speichert keine zusätzliche Einheit für den Bias
+            params = ((layer.inputC * layer.kernelH * layer.kernelW) + add_b) * layer.F # Berechnet die Anzahl der Parameter als das Produkt der Eingangskanäle, der Kernelhöhe, der Kernelbreite und der Anzahl der Filter plus die zusätzliche Einheit für den Bias
+            trainierbar_params += params # Addiert die Anzahl der Parameter zur Anzahl der trainierbaren Parameter hinzu
+            gesamt_params += params # Addiert die Anzahl der Parameter zur Gesamtzahl hinzu
+        else: 
+            
+            params = 0 
+        namen = [name, out, str(params)] 
+        # print this row
+        text = &#39;&#39; # Initialisiert einen leeren Text
+        for j in range(3): # Iteriert über die drei Spalten
+            text += namen[j] + &#39; &#39;*(len_zugewiesen[j]-len(namen[j])) 
+        print(text) # Druckt den Text
+        if i!=(len(self.schicht_name)-1):
+            print(&#39;.&#39;*sum(len_zugewiesen))
+        else:
+            print(&#39;#&#39;*sum(len_zugewiesen))
+    
+    print(&#34;Trainable params:&#34;, trainierbar_params) 
+    print(&#34;Non-trainable params:&#34;, nicht_trainierbar_params) # Druckt die Anzahl der nicht trainierbaren Parameter
+    print(&#34;Total params:&#34;, gesamt_params)
+    print(&#39;-&#39;*sum(len_zugewiesen)) # Druckt eine Trennlinie</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="Neural" href="index.html">Neural</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="Neural.Network.BatchNorm" href="#Neural.Network.BatchNorm">BatchNorm</a></code></h4>
+<ul class="">
+<li><code><a title="Neural.Network.BatchNorm.backpropagation" href="#Neural.Network.BatchNorm.backpropagation">backpropagation</a></code></li>
+<li><code><a title="Neural.Network.BatchNorm.forward" href="#Neural.Network.BatchNorm.forward">forward</a></code></li>
+<li><code><a title="Neural.Network.BatchNorm.init_params" href="#Neural.Network.BatchNorm.init_params">init_params</a></code></li>
+<li><code><a title="Neural.Network.BatchNorm.update" href="#Neural.Network.BatchNorm.update">update</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="Neural.Network.Network" href="#Neural.Network.Network">Network</a></code></h4>
+<ul class="">
+<li><code><a title="Neural.Network.Network.Input" href="#Neural.Network.Network.Input">Input</a></code></li>
+<li><code><a title="Neural.Network.Network.accuracy_plot" href="#Neural.Network.Network.accuracy_plot">accuracy_plot</a></code></li>
+<li><code><a title="Neural.Network.Network.add" href="#Neural.Network.Network.add">add</a></code></li>
+<li><code><a title="Neural.Network.Network.compile" href="#Neural.Network.Network.compile">compile</a></code></li>
+<li><code><a title="Neural.Network.Network.evaluate" href="#Neural.Network.Network.evaluate">evaluate</a></code></li>
+<li><code><a title="Neural.Network.Network.fit" href="#Neural.Network.Network.fit">fit</a></code></li>
+<li><code><a title="Neural.Network.Network.init_params" href="#Neural.Network.Network.init_params">init_params</a></code></li>
+<li><code><a title="Neural.Network.Network.load" href="#Neural.Network.Network.load">load</a></code></li>
+<li><code><a title="Neural.Network.Network.loss_plot" href="#Neural.Network.Network.loss_plot">loss_plot</a></code></li>
+<li><code><a title="Neural.Network.Network.network_architecture" href="#Neural.Network.Network.network_architecture">network_architecture</a></code></li>
+<li><code><a title="Neural.Network.Network.predict" href="#Neural.Network.Network.predict">predict</a></code></li>
+<li><code><a title="Neural.Network.Network.save" href="#Neural.Network.Network.save">save</a></code></li>
+<li><code><a title="Neural.Network.Network.summary" href="#Neural.Network.Network.summary">summary</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
