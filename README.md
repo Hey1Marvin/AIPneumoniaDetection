@@ -120,3 +120,4 @@ Die Dateien sind entsprechend der logischen Struktur unserer Forschung geglieder
 Bei Fragen oder Interesse an einer Weiterentwicklung:  
 📩 **Kontakt:** pneumonia_detection Team  
 🌍 **Projektseite:** [PneuNet auf GitHub](https://github.com/Hey1Marvin/PneuNet)
+**Webseite:** [PneuNet HomePage](https://asgspez.wixsite.com/aipneumoniadetection)
