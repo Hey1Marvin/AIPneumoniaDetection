@@ -1,8 +1,7 @@
 # PneuNet: Pneumonia Detection mit KI
 
 ## 📌 Projektübersicht
-**Team:** pneumonia_detection  
-**Mitglieder:** Dxstxn, KiMa  
+
 **Titel:** Pneumonia Detection mithilfe von Convolutional Neural Networks  
 
 Unser Ziel ist es, Ärzte bei der Diagnose von Pneumonie zu unterstützen, Fehlentscheidungen zu vermeiden und die Genauigkeit der Erkennung zu verbessern. Durch die Optimierung von Netzarchitekturen und Lernparametern streben wir eine höhere Genauigkeit als die durchschnittlichen 76 % der menschlichen Diagnostik an.
