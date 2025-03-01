@@ -1,5 +1,4 @@
-<img src="images/logo.jpg" width="200" height="200" />
-# PneuNet: Pneumonia Detection mit KI
+<img src="images/logo.jpg" width="200" height="50" /> # PneuNet: Pneumonia Detection mit KI
 
 ---
 
