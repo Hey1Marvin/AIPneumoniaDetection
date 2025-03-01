@@ -1,4 +1,4 @@
-![](images/logo.jpg =100x20) 
+<img src="images/logo.jpg" width="200" height="200" />
 # PneuNet: Pneumonia Detection mit KI
 
 ---
