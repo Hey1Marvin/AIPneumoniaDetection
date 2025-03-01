@@ -1,4 +1,4 @@
-![Logo](images/logo.png)
+![Logo](images/logo.jpg)
 # PneuNet: Pneumonia Detection mit KI
 
 ---
@@ -140,7 +140,7 @@ Die KI ist in einen **DICOM-Viewer** integriert, sodass Ärzte ihre Diagnosen ü
 1. Die DICOM-Viewer-Anwendung starten (Python-Implementierung) (eventuell benötigte Datensätze müssen aus dem Google Drive Speicher gezogen werden).
 2. Eine `.dcm` (DICOM) Datei auswählen (Beispielbilder im `images`-Ordner verfügbar).
 3. Das Bild wird analysiert, die KI gibt eine Diagnose aus und markiert relevante Bereiche.
-![DICOM Viewer Beispiel](images/dicom_viewer_example.png)
+![DICOM Viewer Beispiel](images/dicom_viewer_example.jpeg)
 
 
 ### 📄 Weitere Materialien
