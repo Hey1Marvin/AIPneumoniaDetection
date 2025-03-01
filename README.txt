@@ -1,3 +1,62 @@
+# PneuNet: Pneumonia Detection mit KI
+
+Willkommen zum Repository **PneuNet**, einem Forschungsprojekt zur automatisierten Pneumonie-Erkennung mittels Deep Learning. Dieses Projekt untersucht verschiedene Klassifikations- und Segmentierungsmethoden auf medizinischen Bilddaten (Röntgenaufnahmen der Lunge) und umfasst dabei folende Teilbereiche.
+
+🔗 **Zusätzliche Dateien:** [Google Drive Ordner](https://drive.google.com/drive/folders/1j2y4xAuir8jAB5wOwGD7GjGeYDEXIozN)
+
+---
+
+## 📁 Projektstruktur
+Die Dateien und Ordner folgen der logischen Struktur unserer Forschung:
+
+### 🩺 Klassifizierer
+Untersuchung verschiedener Klassifikationsmethoden zur Detektion von Pneumonie auf Röntgenbildern.
+- **Datensätze:**
+  - [RSNA-Pneumonia-Detection-Challenge](https://www.kaggle.com/c/rsna-pneumonia-detection-challenge) (Teil des NIH Chest X-Ray Dataset, ~30.000 Bilder)
+  - [Chest XRay (Pneumonia) Dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia) von Kaggle
+
+### 🫁 LungEx (Lung Segmentation & Classification)
+Analyse von Bildsegmentierungsmethoden und deren Kombination mit Klassifikatoren.
+- **Datensätze:**
+  - [RSNA-Pneumonia-Detection-Challenge](https://www.kaggle.com/c/rsna-pneumonia-detection-challenge)
+  - [Chest XRay Masks and Labels](https://www.kaggle.com/nikhilpandey360/chest-xray-masks-and-labels)
+
+### 🔎 ObjectDet (Objekterkennung)
+Erforschung von Methoden der Objekterkennung, einschließlich Mask R-CNN und CAM.
+- **Datensatz:**
+  - [RSNA-Pneumonia-Detection-Challenge](https://www.kaggle.com/c/rsna-pneumonia-detection-challenge)
+
+### 🏥 DICOM Viewer
+Integration der KI in einen DICOM-Viewer zur Analyse medizinischer Bilddaten.
+- **Implementierungen:**
+  - **C++ (QT)**: Vollständige Implementierung (aufgrund von Speicherbeschränkungen nicht hochgeladen, siehe Abbildungen)
+  - **Python**: Testimplementierung als ausführbares Programm
+- **Dateien:**
+  - `dicomViewer.py` – Implementierung des DICOM-Viewers in Python
+  - `new` – Neuere Version des Viewers (noch in Bearbeitung)
+  - `image_PyDi.jpg` – Beispielbild des Python-Viewers
+  - `image_QtDi.jpg` – Beispielbild des C++-Viewers
+
+---
+
+## 📄 Weitere Materialien
+- **Leseprobe_PneuNet.pdf** – Eine Leseprobe unserer Forschungsarbeit zur Pneumonie-Erkennung mittels Convolutional Neural Networks.
+
+---
+
+## 📢 Kontakt
+Falls Sie Fragen haben oder das Projekt weiterentwickeln möchten, freuen wir uns über Ihr Feedback!
+
+📩 **Kontakt:** [Ihr Name / Teamname]  
+🌍 **Projektseite:** [GitHub-Link wiederholen]
+
+---
+
+### 🚀 Vielen Dank für Ihr Interesse an PneuNet!
+
+
+
+
 Im folgenden sind nur die wichtigsten Programme aufgeführt. Des weiteren Mussten Pogrammteile wie Netzparameter, Datensätze sowie große Anwendungen (DICOM-Viwer in C++) weggelassen werden, da diese das Speicherlimit überschreiten. 
 Für meh Dateien Besuchen sie unser Gihub Page:https://github.com/Hey1Marvin/PneuNet sowie unsern Onlinespeicher: https://drive.google.com/drive/folders/1j2y4xAuir8jAB5wOwGD7GjGeYDEXIozN
 
