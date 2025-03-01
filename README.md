@@ -1,4 +1,5 @@
-![Logo](images/logo.jpg =50x) # PneuNet: Pneumonia Detection mit KI
+![](images/logo.jpg =100x20) 
+# PneuNet: Pneumonia Detection mit KI
 
 ---
 
