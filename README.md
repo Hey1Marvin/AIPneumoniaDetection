@@ -121,3 +121,91 @@ Bei Fragen oder Interesse an einer Weiterentwicklung:
 📩 **Kontakt:** pneumonia_detection Team  
 🌍 **Projektseite:** [PneuNet auf GitHub](https://github.com/Hey1Marvin/PneuNet)
 **Webseite:** [PneuNet HomePage](https://asgspez.wixsite.com/aipneumoniadetection)
+
+
+
+
+![Logo](images/logo.png)
+
+# PneuNet: Präzise Pneumonie-Diagnostik mittels Künstlicher Intelligenz
+
+## Projektübersicht
+**Team:** pneumonia_detection  
+**Mitglieder:** Dxstxn, KiMa  
+**Titel:** Pneumonia Detection mithilfe von Convolutional Neural Networks  
+
+PneuNet ist ein hochinnovatives Forschungsprojekt, das modernste Deep-Learning-Methoden einsetzt, um die diagnostische Genauigkeit bei der Erkennung von Pneumonie signifikant zu verbessern. Unser Ziel ist es, klinische Entscheidungsprozesse zu optimieren und diagnostische Fehler drastisch zu reduzieren.
+
+---
+
+## Inhaltsverzeichnis
+- [Projektübersicht](#projektübersicht)
+- [Motivation & Relevanz](#motivation--relevanz)
+- [Technische Spezifikationen](#technische-spezifikationen)
+- [Daten & Vorverarbeitung](#daten--vorverarbeitung)
+- [Methodik & Evaluation](#methodik--evaluation)
+- [DICOM Viewer Integration](#dicom-viewer-integration)
+- [Installation & Nutzung](#installation--nutzung)
+- [Mitwirkung & Lizenz](#mitwirkung--lizenz)
+- [Kontakt](#kontakt)
+
+---
+
+## Motivation & Relevanz
+Pneumonie zählt weltweit zu den führenden Infektionskrankheiten und stellt vor allem in ressourcenarmen Regionen ein erhebliches Gesundheitsrisiko dar. Unsere Forschung zielt darauf ab:
+
+- **Fehlerminimierung:** Reduktion der diagnostischen Fehlerquote, da die manuelle Diagnose oft nur ca. 76 % Genauigkeit erreicht.
+- **Effizienzsteigerung:** Beschleunigung der Diagnoseprozesse in zeitkritischen klinischen Umgebungen.
+- **Transparenz:** Bereitstellung erklärbarer KI-Ergebnisse zur Unterstützung des ärztlichen Entscheidungsprozesses.
+
+---
+
+## Technische Spezifikationen
+- **Höchste Genauigkeit:** Über 90 % diagnostische Präzision.
+- **Modulare Architektur:** Klare Trennung der Module für Klassifikation, Segmentierung und Objekterkennung.
+- **Erklärbare KI:** Einsatz fortschrittlicher Techniken wie Mask R-CNN und Class Activation Mapping (CAM) zur transparenten Darstellung der Entscheidungsgrundlagen.
+- **DICOM Viewer Integration:** Intuitive Benutzeroberfläche zur direkten Visualisierung und Interaktion mit den Analyseergebnissen.
+
+---
+
+## Daten & Vorverarbeitung
+### Verwendete Datensätze
+- **NIH-Chest-Xray Dataset:** Enthält 30.000 Röntgenbilder, kategorisiert in „erkrankt“ und „gesund“.
+- **Kaggle Chest XRay Dataset:** Umfasst 6.000 Röntgenbilder, unterteilt in „gesund“, „bakterielle Pneumonie“ und „virale Pneumonie“.
+- **Lungen-Segmentationsdatensatz (Kaggle):** Unterstützt die präzise Segmentierung des Lungenbereichs, um die Diagnosegenauigkeit zu erhöhen.
+
+### Vorverarbeitung
+Um die Leistungsfähigkeit unseres Modells zu maximieren, haben wir folgende Strategien implementiert:
+- **Image Augmentation:** Erweiterung der Datenvielfalt durch diverse Bildtransformationen.
+- **Datenfusion:** Kombination mehrerer Datensätze zur Erstellung eines robusten Trainingsmaterials.
+- **Gezielte Datensatzzuordnung:** Unterschiedliche Datensätze werden je nach Anwendungsfall (Klassifikation, Segmentierung, Objekterkennung) spezifisch aufbereitet.
+
+---
+
+## Methodik & Evaluation
+Unsere methodische Vorgehensweise basiert auf intensiven Experimenten und modernsten Ansätzen:
+- **Modellentwicklung:** Aufbau eines maßgeschneiderten CNN-Moduls und Integration fortschrittlicher Klassifikationsarchitekturen (z. B. EfficientNet).
+- **Segmentierung & Erklärbarkeit:** Kombination von Lungenbereichssegmentierung (z. B. mit SegFormer) mit transparenten Entscheidungsmechanismen (Mask R-CNN, CAM).
+- **Evaluation:** Strikte Aufteilung in Trainings- und Validierungsdatensätze mit folgenden Ergebnissen:
+  - **Klassifikation:** >87 % Genauigkeit
+  - **Segmentierung:** >98 % Genauigkeit
+  - **Objekterkennung (Mask R-CNN):** >90 % Genauigkeit
+
+---
+
+## DICOM Viewer Integration
+Die Integration der KI in einen modernen DICOM-Viewer ermöglicht eine direkte klinische Anwendung:
+- **Benutzerfreundliche Oberfläche:** Ärzte können einfach `.dcm` Dateien auswählen und die Analyseergebnisse direkt abrufen.
+- **Direkte Visualisierung:** Die KI analysiert das Bild, liefert eine präzise Diagnose und markiert relevante Anomalien.
+
+![DICOM Viewer Beispiel](images/dicom_viewer_example.png)
+
+---
+
+## Installation & Nutzung
+### Installation
+1. **Repository klonen:**
+   ```bash
+   git clone https://github.com/Hey1Marvin/PneuNet.git
+   cd PneuNet
+
